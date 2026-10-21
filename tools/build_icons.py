@@ -1,190 +1,131 @@
 #!/usr/bin/env python3
-"""Generate original SVG glyphs, DDS textures, and a DXML replacement script."""
+"""Build conservative 2x HD PDA atlases and a layer-preserving DXML patch."""
 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
+import shutil
+import struct
 import subprocess
 import tempfile
 from pathlib import Path
 
-import cairosvg
+from PIL import Image, ImageFilter
 
-GLYPHS = {
-    "player": ("#C8D0D0", '<path d="M32 5 52 57 32 47 12 57Z"/>'),
-    "mission_primary": ("#D98C65", '<path d="m32 5 8 18 19 2-14 13 4 20-17-10-17 10 4-20-14-13 19-2Z"/>'),
-    "mission_side": ("#E6BA62", '<path d="M18 9h28a5 5 0 0 1 5 5v36a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5V14a5 5 0 0 1 5-5Z"/><path d="M23 22h18M23 32h18M23 42h9"/>'),
-    "mission_done": ("#83B9A0", '<path d="m12 33 13 13 28-29"/>'),
-    "stash": ("#83B9A0", '<path d="M12 22h40v31H12zM17 22l4-11h22l4 11M12 32h40M27 32v7h10v-7"/>'),
-    "exit": ("#C8D0D0", '<path d="M10 32h35M31 17l15 15-15 15M48 11h7v42h-7"/>'),
-    "fast_travel": ("#7EAEC9", '<circle cx="32" cy="32" r="24"/><path d="M32 8v15M32 41v15M8 32h15M41 32h15M32 23l7 9-7 9-7-9Z"/>'),
-    "person": ("#C8D0D0", '<circle cx="32" cy="18" r="9"/><path d="M14 56c1-13 7-21 18-21s17 8 18 21M22 56V44M42 44v12"/>'),
-    "merchant": ("#E6BA62", '<path d="M12 25h40v30H12zM9 25l5-14h36l5 14M25 25v-7h14v7M21 40h22"/>'),
-    "mechanic": ("#C8D0D0", '<path d="M39 12a15 15 0 0 0-18 19L9 43a7 7 0 0 0 10 10l12-12a15 15 0 0 0 19-18l-9 9-10-10Z"/>'),
-    "medic": ("#CD6868", '<path d="M24 8h16v16h16v16H40v16H24V40H8V24h16Z"/>'),
-    "guide": ("#7EAEC9", '<circle cx="32" cy="32" r="24"/><path d="m42 20-6 16-16 8 6-16Z"/><circle cx="32" cy="32" r="3"/>'),
-    "faction": ("#7EAEC9", '<path d="M32 6 53 14v17c0 13-9 22-21 27C20 53 11 44 11 31V14Z"/><path d="m32 17 4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1Z"/>'),
-    "hostile": ("#CD6868", '<path d="M32 7 59 55H5Z"/><path d="M32 22v15M32 45v1"/>'),
-    "anomaly": ("#CD6868", '<circle cx="32" cy="32" r="5"/><path d="M32 8v12M32 44v12M8 32h12M44 32h12M15 15l9 9M40 40l9 9M49 15l-9 9M24 40l-9 9"/>'),
-    "artifact": ("#E6BA62", '<path d="m32 6 18 17-8 34H22l-8-34Z"/><path d="m14 23 18 9 18-9M32 32v25M23 14l9 18 9-18"/>'),
-    "base": ("#83B9A0", '<path d="M9 54V10l17 7 14-7v44l-14-7Z"/><path d="M17 29h16M17 38h16"/>'),
-    "item": ("#C8D0D0", '<path d="M10 20h44v35H10zM10 20l8-10h28l8 10M32 20v35M18 31h7"/>'),
-    "marker": ("#778185", '<circle cx="32" cy="32" r="19"/><circle cx="32" cy="32" r="5"/>'),
-    "combat": ("#CD6868", '<circle cx="32" cy="32" r="22"/><path d="M32 5v14M32 45v14M5 32h14M45 32h14M22 32h20M32 22v20"/>'),
-}
-
-EXCLUSIONS = {
-    "no_spot": "Invisible sentinel; replacing it with a visible glyph would reveal markers the base UI suppresses.",
-    "debug_stalker_spot": "Debug-only invalid-hint marker, retained as configured for troubleshooting.",
-    "complex_map_spot_border": "Structural border overlay, not a map marker glyph.",
-    "level_map_spot_border": "Structural border overlay, not a map marker glyph.",
-    "mini_map_spot_border": "Structural border overlay, not a map marker glyph.",
-}
+TARGET_XML = (
+    r"ui\map_spots.xml",
+    r"ui\map_spots_16.xml",
+    r"ui\map_spots_mp.xml",
+    r"ui\map_spots_relations.xml",
+    r"ui\map_spots_complex.xml",
+)
+RECT_KEYS = ("x", "y", "width", "height")
 
 
-def category(marker_id: str) -> str:
-    name = marker_id.lower()
-    if "pointer" in name and "mp_" not in name:
-        return "player"
-    if "storyline" in name or "primary" in name:
-        return "mission_primary"
-    if "secondary_task" in name or "stask" in name:
-        return "mission_side"
-    if "treasure_searched" in name:
-        return "mission_done"
-    if "treasure" in name or "stash" in name or "box_location" in name or "player_mine" in name:
-        return "stash"
-    if "mechanic" in name:
-        return "mechanic"
-    if "medic" in name or "medical" in name:
-        return "medic"
-    if "trader" in name or "barman" in name:
-        return "merchant"
-    if "guider" in name or "scout" in name:
-        return "guide"
-    if "companion" in name or "friend" in name or "allies" in name or "friendly" in name:
-        return "person"
-    if "enemy" in name or "hostile" in name or "attack" in name or "fight" in name or "combat" in name:
-        return "combat"
-    if "anomaly" in name or "anom_zone" in name:
-        return "anomaly"
-    if "artefact" in name or "artifact" in name:
-        return "artifact"
-    if "level_changer" in name:
-        return "exit"
-    if "fast_travel" in name:
-        return "fast_travel"
-    if "item_" in name:
-        return "item"
-    if name in {"circle_red_spot", "circle_green_spot", "circle_yellow_spot", "circle_empty_spot"}:
-        return "marker"
-    if name == "circle_target_spot":
-        return "hostile"
-    if "faction" in name or name.startswith("circle_") or "warfare_" in name or "team_base" in name:
-        return "faction"
-    if "base" in name or "territory" in name or "smart" in name:
-        return "base"
-    if "task" in name or "quest" in name:
-        return "mission_side"
-    if "target" in name or "explo" in name or "deadbody" in name:
-        return "hostile"
-    if name in {"no_spot", "debug_stalker_spot", "complex_map_spot_border", "level_map_spot_border", "mini_map_spot_border"}:
-        return "marker"
-    if "actor" in name or "npc" in name or "stalker" in name or "neutral" in name:
-        return "person"
-    return "marker"
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def dds_header(path: Path) -> dict[str, object]:
+    with path.open("rb") as stream:
+        data = stream.read(128)
+    if len(data) != 128 or data[:4] != b"DDS ":
+        raise ValueError(f"Invalid DDS header: {path}")
+    height, width = struct.unpack_from("<II", data, 12)
+    mips = struct.unpack_from("<I", data, 28)[0] or 1
+    fourcc = data[84:88].decode("ascii", errors="replace").rstrip("\0")
+    return {"width": width, "height": height, "format": fourcc, "mip_levels": mips}
+
+
+def rule_key(texture_id: str, attributes: dict[str, str]) -> str:
+    return "|".join([texture_id, *(str(attributes.get(key, "")) for key in RECT_KEYS)])
+
+
+def collect_rules(manifest: dict[str, object], factor: int) -> tuple[dict[str, dict[str, object]], set[str]]:
+    rules: dict[str, dict[str, object]] = {}
+    unresolved: set[str] = set()
+    for marker in manifest["markers"]:
+        for layer in marker["texture_layers"]:
+            texture_id = layer.get("texture_id")
+            source_file = layer.get("original_file")
+            rect = layer.get("atlas_rect")
+            if not texture_id or not source_file or not rect:
+                if texture_id:
+                    unresolved.add(texture_id)
+                continue
+            if not all(isinstance(rect.get(key), int) for key in RECT_KEYS):
+                raise ValueError(f"Non-numeric atlas rectangle for {texture_id}: {rect}")
+            key = rule_key(texture_id, layer.get("attributes") or {})
+            atlas_stem = Path(source_file).stem
+            candidate = {
+                "source_texture_id": texture_id,
+                "source_file": source_file,
+                "texture": rf"ui\anomalyhope\pda\atlas\{atlas_stem}_hd",
+                **{name: int(rect[name]) * factor for name in RECT_KEYS},
+            }
+            existing = rules.get(key)
+            if existing and existing != candidate:
+                raise ValueError(f"Conflicting layer rule for {key}: {existing} vs {candidate}")
+            rules[key] = candidate
+    return rules, unresolved
 
 
 def lua_quote(value: str) -> str:
     return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--manifest", type=Path, default=Path(__file__).resolve().parents[1] / "assets/manifest/icons.json")
-    parser.add_argument("--output-root", type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument("--texconv", type=Path, required=True)
-    parser.add_argument("--size", type=int, default=128)
-    args = parser.parse_args()
-    root = args.output_root.resolve()
-    manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
-    if manifest.get("base_marker_definition_inventory_complete") is not True:
-        raise SystemExit("Refusing generation: marker definition inventory is incomplete")
-    marker_categories = {
-        marker["technical_id"]: category(marker["technical_id"])
-        for marker in manifest["markers"]
-        if marker["technical_id"] not in EXCLUSIONS
-    }
-    source_dir = root / "assets/sources/icons"
-    texture_dir = root / "gamedata/textures/ui/anomalyhope/pda/icons"
-    source_dir.mkdir(parents=True, exist_ok=True)
-    texture_dir.mkdir(parents=True, exist_ok=True)
-    for glyph_id, (color, artwork) in GLYPHS.items():
-        svg = (
-            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" '
-            'width="64" height="64"><g fill="none" stroke="' + color + '" '
-            'stroke-width="4" stroke-linecap="round" stroke-linejoin="round">'
-            + artwork + '</g></svg>\n'
+def write_dxml(path: Path, rules: dict[str, dict[str, object]]) -> None:
+    rule_lines = []
+    for key, rule in sorted(rules.items()):
+        rule_lines.append(
+            f"    [{lua_quote(key)}] = {{ texture = {lua_quote(str(rule['texture']))}, "
+            f"x = {rule['x']}, y = {rule['y']}, width = {rule['width']}, height = {rule['height']} }}"
         )
-        svg_path = source_dir / f"{glyph_id}.svg"
-        svg_path.write_text(svg, encoding="utf-8")
-        png = cairosvg.svg2png(bytestring=svg.encode(), output_width=args.size, output_height=args.size)
-        with tempfile.TemporaryDirectory(prefix="anomalyhope-icon-") as temporary:
-            png_path = Path(temporary) / f"{glyph_id}.png"
-            png_path.write_bytes(png)
-            result = subprocess.run(
-                [str(args.texconv), "-nologo", "-y", "-f", "DXT5", "-o", str(temporary), str(png_path)],
-                check=False, capture_output=True, text=True,
-            )
-            dds_path = Path(temporary) / f"{glyph_id}.dds"
-            if result.returncode or not dds_path.is_file():
-                raise SystemExit(f"texconv failed for {glyph_id}: {result.stdout}\n{result.stderr}")
-            (texture_dir / dds_path.name).write_bytes(dds_path.read_bytes())
-
-    map_data = {
-        "schema_version": 1,
-        "method": "technical_id_semantic_rules",
-        "in_game_verification": "pending",
-        "documented_exclusions": [
-            {"technical_id": marker_id, "reason": reason}
-            for marker_id, reason in sorted(EXCLUSIONS.items())
-            if marker_id in {item["technical_id"] for item in manifest["markers"]}
-        ],
-        "markers": [
-            {"technical_id": marker_id, "glyph": glyph_id,
-             "texture": f"ui\\anomalyhope\\pda\\icons\\{glyph_id}"}
-            for marker_id, glyph_id in sorted(marker_categories.items())
-        ],
-    }
-    (root / "assets/manifest/icon_replacements.json").write_text(
-        json.dumps(map_data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
-    lua_entries = ",\n".join(
-        f"\t[{lua_quote(marker_id)}] = {lua_quote(glyph_id)}"
-        for marker_id, glyph_id in sorted(marker_categories.items())
-    )
-    lua = f'''-- Generated by tools/build_icons.py. Do not edit by hand.
-local replacements = {{
-{lua_entries}
+    targets = "\n".join(f"    [ [[{name}]] ] = true," for name in TARGET_XML)
+    joined_rules = ",\n".join(rule_lines)
+    body = f'''-- Generated by tools/build_icons.py. Do not edit by hand.
+-- Each rule replaces one original atlas layer while preserving the marker tree,
+-- display size, tint, animation, light_anim, location_level, and z-order.
+local layer_rules = {{
+{joined_rules}
 }}
 
 local target_files = {{
-    [ [[ui\\map_spots.xml]] ] = true,
-    [ [[ui\\map_spots_16.xml]] ] = true,
-    [ [[ui\\map_spots_mp.xml]] ] = true,
-    [ [[ui\\map_spots_relations.xml]] ] = true,
-    [ [[ui\\map_spots_complex.xml]] ] = true,
+{targets}
 }}
 
-local function replace_textures(xml_obj, node, glyph)
+local function value_or_empty(value)
+    return value and tostring(value) or ""
+end
+
+local function layer_key(xml_obj, element)
+    local text = xml_obj:getText(element)
+    if not text then return nil end
+    local attr = xml_obj:getElementAttr(element) or {{}}
+    return text .. "|" .. value_or_empty(attr.x) .. "|" .. value_or_empty(attr.y)
+        .. "|" .. value_or_empty(attr.width) .. "|" .. value_or_empty(attr.height)
+end
+
+local function patch_tree(xml_obj, node)
     xml_obj:iterateChildren(node, function(child)
         if not xml_obj:isElement(child) then return end
         if xml_obj:getElementName(child) == "texture" then
-            xml_obj:setText(child, "ui\\\\anomalyhope\\\\pda\\\\icons\\\\" .. glyph)
-            xml_obj:removeElementAttr(child, {{"x", "y", "width", "height"}})
+            local key = layer_key(xml_obj, child)
+            local rule = key and layer_rules[key]
+            if rule then
+                xml_obj:setText(child, rule.texture)
+                xml_obj:setElementAttr(child, {{
+                    x = rule.x, y = rule.y, width = rule.width, height = rule.height
+                }})
+            end
         else
-            replace_textures(xml_obj, child, glyph)
+            patch_tree(xml_obj, child)
         end
     end)
 end
@@ -192,19 +133,99 @@ end
 function on_xml_read()
     RegisterScriptCallback("on_xml_read", function(xml_file_name, xml_obj)
         if not target_files[xml_file_name] then return end
-        for marker_id, glyph in pairs(replacements) do
-            local matches = xml_obj:query(marker_id)
-            for _, node in ipairs(matches) do
-                replace_textures(xml_obj, node, glyph)
-            end
-        end
+        patch_tree(xml_obj, xml_obj:getRoot())
     end)
 end
 '''
-    runtime = root / "gamedata/scripts/modxml_anomalyhope_pda_icons.script"
-    runtime.parent.mkdir(parents=True, exist_ok=True)
-    runtime.write_text(lua, encoding="utf-8")
-    print(f"Built {len(GLYPHS)} standalone DDS glyphs and mapped {len(marker_categories)} marker IDs.")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(body, encoding="utf-8", newline="\n")
+
+
+def upscale(source: Path, destination_png: Path, factor: int) -> tuple[int, int]:
+    with Image.open(source) as opened:
+        image = opened.convert("RGBA")
+    target = (image.width * factor, image.height * factor)
+    scaled = image.convert("RGBa").resize(target, Image.Resampling.LANCZOS).convert("RGBA")
+    alpha = scaled.getchannel("A")
+    rgb = scaled.convert("RGB").filter(ImageFilter.UnsharpMask(radius=0.55, percent=38, threshold=3))
+    Image.merge("RGBA", (*rgb.split(), alpha)).save(destination_png, format="PNG", optimize=False)
+    return target
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--textures-root", type=Path, required=True,
+                        help="Extracted root containing textures/ui/*.dds")
+    parser.add_argument("--manifest", type=Path,
+                        default=Path(__file__).resolve().parents[1] / "assets/manifest/icons.json")
+    parser.add_argument("--output-root", type=Path, required=True,
+                        help="New MO2-ready output directory")
+    parser.add_argument("--texconv", type=Path, help="DirectXTex texconv.exe; otherwise use PATH")
+    parser.add_argument("--factor", type=int, choices=(2,), default=2)
+    args = parser.parse_args()
+
+    textures_root = args.textures_root.resolve()
+    output_root = args.output_root.resolve()
+    if output_root.exists():
+        raise SystemExit(f"Output path must not already exist: {output_root}")
+    texconv = str(args.texconv) if args.texconv else shutil.which("texconv")
+    if not texconv or not Path(texconv).is_file():
+        raise SystemExit("DirectXTex texconv.exe was not found; pass --texconv explicitly")
+    manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
+    if manifest.get("base_marker_definition_inventory_complete") is not True:
+        raise SystemExit("Refusing build: base marker definition inventory is incomplete")
+
+    rules, unresolved = collect_rules(manifest, args.factor)
+    source_files = sorted({str(rule["source_file"]) for rule in rules.values()})
+    atlas_dir = output_root / "gamedata/textures/ui/anomalyhope/pda/atlas"
+    script_path = output_root / "gamedata/scripts/modxml_anomalyhope_pda_icons.script"
+    atlas_dir.mkdir(parents=True)
+    write_dxml(script_path, rules)
+    report: dict[str, object] = {
+        "game": manifest["game"],
+        "method": "2x Lanczos in premultiplied alpha with restrained edge cleanup",
+        "factor": args.factor,
+        "layer_rule_count": len(rules),
+        "unresolved_texture_ids_left_unchanged": sorted(unresolved),
+        "atlases": [],
+    }
+
+    with tempfile.TemporaryDirectory(prefix="anomalyhope-pda-build-") as temp_name:
+        temp = Path(temp_name)
+        for index, relative in enumerate(source_files):
+            source = textures_root / Path(relative)
+            if not source.is_file():
+                raise SystemExit(f"Required source atlas is missing: {source}")
+            source_info = dds_header(source)
+            if source_info["format"] != "DXT5" or source_info["mip_levels"] != 1:
+                raise SystemExit(f"Unexpected source DDS layout for {source}: {source_info}")
+            png = temp / f"{index:02d}_{source.stem}_hd.png"
+            expected_size = upscale(source, png, args.factor)
+            completed = subprocess.run(
+                [texconv, "-nologo", "-y", "-dx9", "-m", "1", "-f", "DXT5", "-o", str(temp), str(png)],
+                capture_output=True, text=True,
+            )
+            generated = temp / f"{png.stem}.dds"
+            if completed.returncode or not generated.is_file():
+                raise RuntimeError(f"texconv failed for {source}:\n{completed.stdout}\n{completed.stderr}")
+            output = atlas_dir / f"{source.stem}_hd.dds"
+            shutil.copy2(generated, output)
+            output_info = dds_header(output)
+            if (output_info["width"], output_info["height"]) != expected_size:
+                raise RuntimeError(f"Unexpected output dimensions for {output}")
+            report["atlases"].append({
+                "source_file": relative,
+                "output_file": str(output.relative_to(output_root)).replace("\\", "/"),
+                "source": {**source_info, "sha256": sha256(source)},
+                "output": {**output_info, "sha256": sha256(output)},
+            })
+
+    (output_root / "build_report.json").write_text(
+        json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
+    print(f"Built {len(source_files)} HD atlases and {len(rules)} layer rules: {output_root}")
+    if unresolved:
+        print(f"Left unresolved source symbols unchanged: {', '.join(sorted(unresolved))}")
 
 
 if __name__ == "__main__":

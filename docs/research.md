@@ -21,13 +21,17 @@ The repeatable extraction entry point is `tools/extract_anomaly_resources.ps1`. 
 
 The definition inventory is complete for the five base-game files listed above. One source symbol, `ui_alife_combat`, has no descriptor or archived UI DDS; it is attached to the `alife_combat_spot` definition in both layouts. Its combat-contact purpose is evident from the configured ID and binding, but the original image is unresolved. The manifest records this explicitly and the validator checks all five referenced source DDS atlases and their available rectangle bounds.
 
-An original set of 20 SVG glyphs is now built into 20 standalone DXT5 DDS files. The generated DXML script maps 249 technical IDs to those glyphs and leaves five explicitly documented non-icon entries unchanged (`no_spot`, `debug_stalker_spot`, and three structural map borders). It changes text/atlas attributes only, retaining configured dimensions, tint, nested layers, and animation attributes. This is based on the DXML API implementation and generated asset checks; resource lookup, visual output, animation behavior, and third-party compatibility remain unverified in-game. The manifest does not claim compatibility with third-party marker additions.
+The initial semantic-glyph implementation was rejected after review because it replaced every nested layer of a marker with one generic image. That erased faction identity, specialized task shapes, borders, and some visual states.
+
+The current implementation instead builds conservative 2× versions of all five source atlas families. It uses premultiplied-alpha Lanczos scaling and restrained edge cleanup, preserving the source silhouette and color treatment. Ninety-four unambiguous DXML rules match the original texture ID plus any explicit source rectangle, redirect the layer to its corresponding HD atlas, and double the source rectangle. They do not alter marker width/height, tint, nested structure, animation attributes, location level, heading, or layer order. The unresolved `ui_alife_combat` symbol remains untouched.
+
+Generated atlases are derivative game assets and therefore remain local. Public releases provide a builder that reads them from a legally installed copy of Anomaly.
 
 ## Next steps
 
-1. Confirm direct standalone texture loading and texture-layer behavior in Anomaly 1.5.3; adjust the DXML patch if the engine expects descriptor registration.
-2. Review the ID-to-glyph semantic mapping and check readability at 1080p, 1440p, and 4K.
-3. Test PDA/minimap rendering, task state changes, stash states, animations, and map transitions with MO2; then test third-party additions using standard IDs.
+1. Test atlas redirection and doubled source rectangles in Anomaly 1.5.3 through MO2.
+2. Check PDA/minimap rendering, task state changes, stash states, animations, and map transitions at 1080p, 1440p, and 4K.
+3. Test third-party additions that reuse standard texture IDs and document custom-ID compatibility requirements.
 4. Continue tracing the original `ui_alife_combat` texture source and document it if found.
 
 ## References

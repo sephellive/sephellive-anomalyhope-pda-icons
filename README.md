@@ -1,48 +1,48 @@
 # AnomalyHope PDA Icons
 
-An original, tactical-style replacement set for S.T.A.L.K.E.R. Anomaly 1.5.3 PDA map markers. The base-game marker inventory is complete; the runtime patch, asset build, and in-game validation remain in progress.
+A conservative 2× HD restoration of the S.T.A.L.K.E.R. Anomaly 1.5.3 PDA marker system. It keeps the original icon silhouettes, proportions, colors, layers, animation attributes, faction emblems, and configured screen sizes. The visual change is limited to cleaner edges and restrained detail recovery after DXT compression.
+
+## Why the release is a local builder
+
+The marker atlases are Anomaly game assets. This repository and its GitHub releases contain the reproducible builder, inventory, validators, and DXML generator. They do not redistribute the original or derived game atlases. The builder reads them from your installed copy and creates an independent MO2-ready add-on.
 
 ## Requirements
 
 - S.T.A.L.K.E.R. Anomaly 1.5.3
 - [Anomaly Modded Exes](https://github.com/themrdemonized/xray-monolith) with DXML support
-- Python 3.11+ for inventory and build tools
-- Git LFS for generated DDS assets
+- Python 3.11+ and Pillow
+- DirectXTex `texconv.exe` available in `PATH`, or passed explicitly
 
-## Status
+## Build the MO2 add-on
 
-No release is available yet. This branch is research and implementation work, not a finished or tested game add-on. Do not install it into an active game profile until the release checks are complete. The intended distribution is a separate Mod Organizer 2 mod containing only runtime files under `gamedata/`.
-
-## Inventory
-
-`assets/manifest/icons.json` records the standard and widescreen marker definitions, their bindings, original texture references, atlas regions, dimensions, state attributes, implementation status, and in-game verification status. Rebuild and validate it from a locally installed game:
-
-```powershell
-./tools/extract_anomaly_resources.ps1 -GamePath 'D:\Hope\Anomaly' -OutputPath "$env:TEMP\AnomalyHope-icons"
-python ./tools/inventory_icons.py --config-root "$env:TEMP\AnomalyHope-icons\configs\configs" --textures-root "$env:TEMP\AnomalyHope-icons\textures" --output ./assets/manifest/icons.json
-python ./tools/validate_icon_inventory.py --manifest ./assets/manifest/icons.json --textures-root "$env:TEMP\AnomalyHope-icons\textures"
-```
-
-The validator supports a manifest-only mode for CI and checks local source DDS files and atlas bounds when given `--textures-root`. Original game assets are not redistributed.
-
-## Glyph build
-
-The original SVG glyphs are in `assets/sources/icons/`. Build the standalone DDS files and generated DXML map with DirectXTex:
+From a release or repository checkout:
 
 ```powershell
 python -m pip install -r requirements.txt
-python ./tools/build_icons.py --texconv 'C:\Tools\texconv.exe'
-python ./tools/validate_icon_build.py
+./tools/build_local.ps1 `
+  -GamePath 'D:\Hope\Anomaly' `
+  -OutputPath 'D:\Hope\mo2\mods\AnomalyHope PDA Icons' `
+  -ArchivePath 'D:\Hope\AnomalyHope-PDA-Icons-v0.1.0.zip'
 ```
 
-The current 20-glyph family is mapped across 249 technical IDs by semantic naming rules. Five non-icon entries are explicit exclusions: `no_spot` (visibility sentinel), `debug_stalker_spot` (debug marker), and the three map-frame border elements. The generated patch retains marker dimensions, color/tint attributes, animation attributes, and texture-layer structure while removing atlas coordinates from replaced texture nodes. This is an initial implementation pass; confirm texture lookup, rendered appearance, marker layering, animations, and third-party behavior in Anomaly before describing it as a release.
+If `texconv.exe` is not in `PATH`, add `-TexconvPath 'C:\path\to\texconv.exe'`. The builder never writes into the Anomaly installation. Enable the output directory as a separate mod in MO2 and keep it below Anomaly Modded Exes.
 
-See [`docs/research.md`](docs/research.md) for source locations, confirmed behavior, and unresolved compatibility items.
+## Technical coverage
 
-## Architecture
+`assets/manifest/icons.json` inventories 472 definitions, 254 technical IDs, 514 texture-layer occurrences, and five original atlas families from the standard, widescreen, multiplayer, relation, and complex marker XML files.
 
-Map marker definitions are XML, so the intended targeted runtime patch uses DXML from Anomaly Modded Exes; DLTX does not apply to those files. Original textures will be replaced by separate generated resources rather than modifying the game's atlas files. Compatibility with third-party marker IDs and the final animation behavior still requires testing.
+The generated DXML patch has 94 unambiguous layer rules. Each rule changes only the texture path and doubles its source atlas rectangle; marker dimensions, tints, nested borders, blink/light animations, location levels, heading behavior, and layer order stay intact. The undefined base-game symbol `ui_alife_combat` is deliberately left unchanged.
 
-## License and assets
+Run the checks directly with:
 
-The repository license applies only to original project material. It does not grant rights to S.T.A.L.K.E.R. Anomaly assets. Generated map and icon files derived from game assets must be built locally from a legally installed game and are not included in public releases without redistribution permission.
+```powershell
+python ./tools/validate_icon_inventory.py
+python ./tools/validate_icon_build.py
+python ./tools/validate_icon_build.py --output-root 'D:\Hope\mo2\mods\AnomalyHope PDA Icons'
+```
+
+See [`docs/research.md`](docs/research.md) for the resource analysis and known limits.
+
+## License
+
+The repository license covers original project code and documentation only. It does not grant rights to S.T.A.L.K.E.R. Anomaly assets. Locally generated DDS files must not be redistributed without permission from the relevant rights holders.
