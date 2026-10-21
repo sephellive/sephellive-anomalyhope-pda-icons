@@ -25,6 +25,18 @@ python ./tools/validate_icon_inventory.py --manifest ./assets/manifest/icons.jso
 
 The validator supports a manifest-only mode for CI and checks local source DDS files and atlas bounds when given `--textures-root`. Original game assets are not redistributed.
 
+## Glyph build
+
+The original SVG glyphs are in `assets/sources/icons/`. Build the standalone DDS files and generated DXML map with DirectXTex:
+
+```powershell
+python -m pip install -r requirements.txt
+python ./tools/build_icons.py --texconv 'C:\Tools\texconv.exe'
+python ./tools/validate_icon_build.py
+```
+
+The current 20-glyph family is mapped across 249 technical IDs by semantic naming rules. Five non-icon entries are explicit exclusions: `no_spot` (visibility sentinel), `debug_stalker_spot` (debug marker), and the three map-frame border elements. The generated patch retains marker dimensions, color/tint attributes, animation attributes, and texture-layer structure while removing atlas coordinates from replaced texture nodes. This is an initial implementation pass; confirm texture lookup, rendered appearance, marker layering, animations, and third-party behavior in Anomaly before describing it as a release.
+
 See [`docs/research.md`](docs/research.md) for source locations, confirmed behavior, and unresolved compatibility items.
 
 ## Architecture

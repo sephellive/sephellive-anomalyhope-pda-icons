@@ -1,0 +1,1274 @@
+{
+  "schema_version": 1,
+  "method": "technical_id_semantic_rules",
+  "in_game_verification": "pending",
+  "documented_exclusions": [
+    {
+      "technical_id": "complex_map_spot_border",
+      "reason": "Structural border overlay, not a map marker glyph."
+    },
+    {
+      "technical_id": "debug_stalker_spot",
+      "reason": "Debug-only invalid-hint marker, retained as configured for troubleshooting."
+    },
+    {
+      "technical_id": "level_map_spot_border",
+      "reason": "Structural border overlay, not a map marker glyph."
+    },
+    {
+      "technical_id": "mini_map_spot_border",
+      "reason": "Structural border overlay, not a map marker glyph."
+    },
+    {
+      "technical_id": "no_spot",
+      "reason": "Invisible sentinel; replacing it with a visible glyph would reveal markers the base UI suppresses."
+    }
+  ],
+  "markers": [
+    {
+      "technical_id": "actor_level_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "actor_level_spot_p",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_combat_attack_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_combat_attack_spot_mini",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_combat_fight_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_combat_fight_spot_mini",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_combat_help_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_combat_help_spot_mini",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_combat_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_presentation_faction_army_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "alife_presentation_faction_bandit_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "alife_presentation_faction_dolg_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "alife_presentation_faction_duty_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "alife_presentation_faction_freedom_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "alife_presentation_faction_killer_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "alife_presentation_faction_monster_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "alife_presentation_faction_stalker_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "alife_presentation_faction_zombied_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "alife_presentation_general_base_allies_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_general_base_enemy_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_presentation_general_base_friend_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_general_base_neutral_spot",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_general_base_none_spot",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_smart_base_allies_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_smart_base_allies_spot_mini",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_smart_base_enemy_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_presentation_smart_base_enemy_spot_mini",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_presentation_smart_base_friend_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_smart_base_friend_spot_mini",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_smart_base_neutral_spot",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_smart_base_neutral_spot_mini",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_smart_base_none_spot",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_smart_base_none_spot_mini",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_smart_default_allies_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_smart_default_enemy_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_presentation_smart_default_friend_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_smart_default_neutral_spot",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_smart_default_none_spot",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_smart_none_resource_spot",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_smart_resource_allies_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_smart_resource_enemy_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_presentation_smart_resource_friend_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_smart_resource_neutral_spot",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_smart_science_allies_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_smart_science_enemy_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_presentation_smart_science_friend_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_smart_science_neutral_spot",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_smart_science_none_spot",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_smart_spot",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_smart_territory_allies_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_smart_territory_enemy_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_presentation_smart_territory_friend_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_smart_territory_neutral_spot",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_smart_territory_none_spot",
+      "glyph": "base",
+      "texture": "ui\\anomalyhope\\pda\\icons\\base"
+    },
+    {
+      "technical_id": "alife_presentation_squad_enemy_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_presentation_squad_enemy_spot_1",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_presentation_squad_enemy_spot_mini",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_presentation_squad_enemy_spot_mini_1",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "alife_presentation_squad_friend_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_squad_friend_spot_1",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_squad_friend_spot_mini",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_squad_friend_spot_mini_1",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_squad_monster_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "alife_presentation_squad_monster_spot_1",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "alife_presentation_squad_monster_spot_mini",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "alife_presentation_squad_monster_spot_mini_1",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "alife_presentation_squad_neutral_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_squad_neutral_spot_1",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_squad_neutral_spot_mini",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "alife_presentation_squad_neutral_spot_mini_1",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "anom_zone_spot",
+      "glyph": "anomaly",
+      "texture": "ui\\anomalyhope\\pda\\icons\\anomaly"
+    },
+    {
+      "technical_id": "anom_zone_spot_mini",
+      "glyph": "anomaly",
+      "texture": "ui\\anomalyhope\\pda\\icons\\anomaly"
+    },
+    {
+      "technical_id": "anomaly_chemical_spot",
+      "glyph": "anomaly",
+      "texture": "ui\\anomalyhope\\pda\\icons\\anomaly"
+    },
+    {
+      "technical_id": "anomaly_disabled_spot",
+      "glyph": "anomaly",
+      "texture": "ui\\anomalyhope\\pda\\icons\\anomaly"
+    },
+    {
+      "technical_id": "anomaly_electric_spot",
+      "glyph": "anomaly",
+      "texture": "ui\\anomalyhope\\pda\\icons\\anomaly"
+    },
+    {
+      "technical_id": "anomaly_gravitational_spot",
+      "glyph": "anomaly",
+      "texture": "ui\\anomalyhope\\pda\\icons\\anomaly"
+    },
+    {
+      "technical_id": "anomaly_radioactive_spot",
+      "glyph": "anomaly",
+      "texture": "ui\\anomalyhope\\pda\\icons\\anomaly"
+    },
+    {
+      "technical_id": "anomaly_thermal_spot",
+      "glyph": "anomaly",
+      "texture": "ui\\anomalyhope\\pda\\icons\\anomaly"
+    },
+    {
+      "technical_id": "artefact_spot",
+      "glyph": "artifact",
+      "texture": "ui\\anomalyhope\\pda\\icons\\artifact"
+    },
+    {
+      "technical_id": "artefact_spot_mini",
+      "glyph": "artifact",
+      "texture": "ui\\anomalyhope\\pda\\icons\\artifact"
+    },
+    {
+      "technical_id": "blue_mini_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "blue_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "circle_army_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "circle_bandit_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "circle_csky_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "circle_dolg_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "circle_ecolog_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "circle_empty_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "circle_freedom_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "circle_green_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "circle_greh_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "circle_isg_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "circle_killer_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "circle_monolith_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "circle_red_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "circle_renegade_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "circle_stalker_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "circle_target_spot",
+      "glyph": "hostile",
+      "texture": "ui\\anomalyhope\\pda\\icons\\hostile"
+    },
+    {
+      "technical_id": "circle_yellow_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "circle_zombied_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "combat_pointer",
+      "glyph": "player",
+      "texture": "ui\\anomalyhope\\pda\\icons\\player"
+    },
+    {
+      "technical_id": "companion_spot_mini",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "companion_tex",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "crlc_big_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "crlc_mdl_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "crlc_small_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "crlc_squad_spot_green",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "crlc_squad_spot_red",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "deadbody_mini_spot",
+      "glyph": "hostile",
+      "texture": "ui\\anomalyhope\\pda\\icons\\hostile"
+    },
+    {
+      "technical_id": "enemy_mini_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "explo_mini_spot",
+      "glyph": "hostile",
+      "texture": "ui\\anomalyhope\\pda\\icons\\hostile"
+    },
+    {
+      "technical_id": "explo_spot",
+      "glyph": "hostile",
+      "texture": "ui\\anomalyhope\\pda\\icons\\hostile"
+    },
+    {
+      "technical_id": "fast_travel_spot",
+      "glyph": "fast_travel",
+      "texture": "ui\\anomalyhope\\pda\\icons\\fast_travel"
+    },
+    {
+      "technical_id": "friend_mini_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "green_mini_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "green_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "item_ammo_spot",
+      "glyph": "item",
+      "texture": "ui\\anomalyhope\\pda\\icons\\item"
+    },
+    {
+      "technical_id": "item_drink_spot",
+      "glyph": "item",
+      "texture": "ui\\anomalyhope\\pda\\icons\\item"
+    },
+    {
+      "technical_id": "item_food_spot",
+      "glyph": "item",
+      "texture": "ui\\anomalyhope\\pda\\icons\\item"
+    },
+    {
+      "technical_id": "item_kit_spot",
+      "glyph": "item",
+      "texture": "ui\\anomalyhope\\pda\\icons\\item"
+    },
+    {
+      "technical_id": "item_medical_spot",
+      "glyph": "medic",
+      "texture": "ui\\anomalyhope\\pda\\icons\\medic"
+    },
+    {
+      "technical_id": "item_misc_spot",
+      "glyph": "item",
+      "texture": "ui\\anomalyhope\\pda\\icons\\item"
+    },
+    {
+      "technical_id": "level_changer_down_left_spot",
+      "glyph": "exit",
+      "texture": "ui\\anomalyhope\\pda\\icons\\exit"
+    },
+    {
+      "technical_id": "level_changer_down_spot",
+      "glyph": "exit",
+      "texture": "ui\\anomalyhope\\pda\\icons\\exit"
+    },
+    {
+      "technical_id": "level_changer_left_spot",
+      "glyph": "exit",
+      "texture": "ui\\anomalyhope\\pda\\icons\\exit"
+    },
+    {
+      "technical_id": "level_changer_left_up_spot",
+      "glyph": "exit",
+      "texture": "ui\\anomalyhope\\pda\\icons\\exit"
+    },
+    {
+      "technical_id": "level_changer_right_down_spot",
+      "glyph": "exit",
+      "texture": "ui\\anomalyhope\\pda\\icons\\exit"
+    },
+    {
+      "technical_id": "level_changer_right_spot",
+      "glyph": "exit",
+      "texture": "ui\\anomalyhope\\pda\\icons\\exit"
+    },
+    {
+      "technical_id": "level_changer_spot_mini",
+      "glyph": "exit",
+      "texture": "ui\\anomalyhope\\pda\\icons\\exit"
+    },
+    {
+      "technical_id": "level_changer_up_right_spot",
+      "glyph": "exit",
+      "texture": "ui\\anomalyhope\\pda\\icons\\exit"
+    },
+    {
+      "technical_id": "level_changer_up_spot",
+      "glyph": "exit",
+      "texture": "ui\\anomalyhope\\pda\\icons\\exit"
+    },
+    {
+      "technical_id": "mp_af_enemy_level_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "mp_af_enemy_mini_pointer",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "mp_af_enemy_mini_spot",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "mp_af_friend_level_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "mp_af_friend_mini_pointer",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "mp_af_friend_mini_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "mp_af_neutral_level_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "mp_af_neutral_mini_pointer",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "mp_af_neutral_mini_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "mp_free_af_friend_level_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "mp_free_af_friend_mini_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "mp_friend_level_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "mp_friend_mini_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "mp_friend_radio_level_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "mp_friend_radio_mini_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "mp_hit_sector_mini_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "mp_self_level_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "mp_team_base_1_level_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "mp_team_base_1_mini_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "mp_team_base_1_pointer",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "mp_team_base_2_level_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "mp_team_base_2_mini_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "mp_team_base_2_pointer",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "neutral_mini_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "primary_object_spot",
+      "glyph": "mission_primary",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_primary"
+    },
+    {
+      "technical_id": "quest_pointer",
+      "glyph": "player",
+      "texture": "ui\\anomalyhope\\pda\\icons\\player"
+    },
+    {
+      "technical_id": "quest_pointer2",
+      "glyph": "player",
+      "texture": "ui\\anomalyhope\\pda\\icons\\player"
+    },
+    {
+      "technical_id": "quest_pointer_small",
+      "glyph": "player",
+      "texture": "ui\\anomalyhope\\pda\\icons\\player"
+    },
+    {
+      "technical_id": "red_mini_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "red_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "secondary_task_bring_item_complex_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "secondary_task_capture_smart_complex_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "secondary_task_complex_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "secondary_task_complex_spot_mini_timer",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "secondary_task_complex_spot_timer",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "secondary_task_defend_smart_complex_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "secondary_task_eliminate_smart_complex_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "secondary_task_eliminate_squad_complex_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "secondary_task_hide_from_surge_complex_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "secondary_task_on_guider_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "secondary_task_recover_item_complex_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "secondary_task_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "secondary_task_spot_mini",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "secondary_task_take_reward_complex_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "storyline_task_on_guider_spot",
+      "glyph": "mission_primary",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_primary"
+    },
+    {
+      "technical_id": "storyline_task_spot",
+      "glyph": "mission_primary",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_primary"
+    },
+    {
+      "technical_id": "storyline_task_spot_mini",
+      "glyph": "mission_primary",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_primary"
+    },
+    {
+      "technical_id": "treasure_player_spot",
+      "glyph": "stash",
+      "texture": "ui\\anomalyhope\\pda\\icons\\stash"
+    },
+    {
+      "technical_id": "treasure_player_spot_mini",
+      "glyph": "stash",
+      "texture": "ui\\anomalyhope\\pda\\icons\\stash"
+    },
+    {
+      "technical_id": "treasure_searched_spot",
+      "glyph": "mission_done",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_done"
+    },
+    {
+      "technical_id": "treasure_searched_spot_mini",
+      "glyph": "mission_done",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_done"
+    },
+    {
+      "technical_id": "treasure_spot",
+      "glyph": "stash",
+      "texture": "ui\\anomalyhope\\pda\\icons\\stash"
+    },
+    {
+      "technical_id": "treasure_spot_all",
+      "glyph": "stash",
+      "texture": "ui\\anomalyhope\\pda\\icons\\stash"
+    },
+    {
+      "technical_id": "treasure_spot_all_mini",
+      "glyph": "stash",
+      "texture": "ui\\anomalyhope\\pda\\icons\\stash"
+    },
+    {
+      "technical_id": "treasure_spot_mini",
+      "glyph": "stash",
+      "texture": "ui\\anomalyhope\\pda\\icons\\stash"
+    },
+    {
+      "technical_id": "treasure_unique_spot",
+      "glyph": "stash",
+      "texture": "ui\\anomalyhope\\pda\\icons\\stash"
+    },
+    {
+      "technical_id": "treasure_unique_spot_mini",
+      "glyph": "stash",
+      "texture": "ui\\anomalyhope\\pda\\icons\\stash"
+    },
+    {
+      "technical_id": "ui_pda2_actor_box_location_mini_spot",
+      "glyph": "stash",
+      "texture": "ui\\anomalyhope\\pda\\icons\\stash"
+    },
+    {
+      "technical_id": "ui_pda2_actor_box_location_spot",
+      "glyph": "stash",
+      "texture": "ui\\anomalyhope\\pda\\icons\\stash"
+    },
+    {
+      "technical_id": "ui_pda2_actor_sleep_location_mini_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "ui_pda2_actor_sleep_location_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "ui_pda2_barman_location_mini_spot",
+      "glyph": "merchant",
+      "texture": "ui\\anomalyhope\\pda\\icons\\merchant"
+    },
+    {
+      "technical_id": "ui_pda2_barman_location_spot",
+      "glyph": "merchant",
+      "texture": "ui\\anomalyhope\\pda\\icons\\merchant"
+    },
+    {
+      "technical_id": "ui_pda2_companion_location_mini_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "ui_pda2_companion_location_spot",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "ui_pda2_mechanic_location_mini_spot",
+      "glyph": "mechanic",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mechanic"
+    },
+    {
+      "technical_id": "ui_pda2_mechanic_location_spot",
+      "glyph": "mechanic",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mechanic"
+    },
+    {
+      "technical_id": "ui_pda2_medic_location_mini_spot",
+      "glyph": "medic",
+      "texture": "ui\\anomalyhope\\pda\\icons\\medic"
+    },
+    {
+      "technical_id": "ui_pda2_medic_location_spot",
+      "glyph": "medic",
+      "texture": "ui\\anomalyhope\\pda\\icons\\medic"
+    },
+    {
+      "technical_id": "ui_pda2_player_mine_location_mini_spot",
+      "glyph": "stash",
+      "texture": "ui\\anomalyhope\\pda\\icons\\stash"
+    },
+    {
+      "technical_id": "ui_pda2_player_mine_location_spot",
+      "glyph": "stash",
+      "texture": "ui\\anomalyhope\\pda\\icons\\stash"
+    },
+    {
+      "technical_id": "ui_pda2_quest_npc_location_mini_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "ui_pda2_quest_npc_location_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "ui_pda2_scout_location_mini_spot",
+      "glyph": "guide",
+      "texture": "ui\\anomalyhope\\pda\\icons\\guide"
+    },
+    {
+      "technical_id": "ui_pda2_scout_location_spot",
+      "glyph": "guide",
+      "texture": "ui\\anomalyhope\\pda\\icons\\guide"
+    },
+    {
+      "technical_id": "ui_pda2_special_location_mini_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "ui_pda2_special_location_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "ui_pda2_trader_location_mini_spot",
+      "glyph": "merchant",
+      "texture": "ui\\anomalyhope\\pda\\icons\\merchant"
+    },
+    {
+      "technical_id": "ui_pda2_trader_location_spot",
+      "glyph": "merchant",
+      "texture": "ui\\anomalyhope\\pda\\icons\\merchant"
+    },
+    {
+      "technical_id": "ui_secondary_task_blink_spot",
+      "glyph": "mission_side",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_side"
+    },
+    {
+      "technical_id": "ui_storyline_task_blink_spot",
+      "glyph": "mission_primary",
+      "texture": "ui\\anomalyhope\\pda\\icons\\mission_primary"
+    },
+    {
+      "technical_id": "user_defined_spot",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "user_defined_spot_mini",
+      "glyph": "marker",
+      "texture": "ui\\anomalyhope\\pda\\icons\\marker"
+    },
+    {
+      "technical_id": "warfare_army_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_army_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_bandit_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_bandit_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_csky_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_csky_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_duty_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_duty_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_ecolog_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_ecolog_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_enemy_tex",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "warfare_enemy_tex_moving",
+      "glyph": "combat",
+      "texture": "ui\\anomalyhope\\pda\\icons\\combat"
+    },
+    {
+      "technical_id": "warfare_freedom_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_freedom_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_friendly_tex",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "warfare_friendly_tex_moving",
+      "glyph": "person",
+      "texture": "ui\\anomalyhope\\pda\\icons\\person"
+    },
+    {
+      "technical_id": "warfare_greh_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_greh_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_isg_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_isg_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_killer_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_killer_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_monolith_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_monolith_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_mutant_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_mutant_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_neutral_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_neutral_tex_moving",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_renegade_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_renegade_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_selected_target_spot",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_stalker_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_stalker_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_zombied_spot_mini",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    },
+    {
+      "technical_id": "warfare_zombied_tex",
+      "glyph": "faction",
+      "texture": "ui\\anomalyhope\\pda\\icons\\faction"
+    }
+  ]
+}
