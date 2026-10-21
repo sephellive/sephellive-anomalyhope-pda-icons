@@ -1,64 +1,28 @@
-# &lt;Addon Name&gt;
+# AnomalyHope PDA Icons
 
-Short description of the addon.
-
-This repository is a template for small, independent S.T.A.L.K.E.R. Anomaly addons. Replace the placeholders, add the addon files under `gamedata`, and develop the mod without a separate build system.
+An original, tactical-style replacement set for S.T.A.L.K.E.R. Anomaly 1.5.3 PDA map markers. The base-game marker inventory is complete; the runtime patch, asset build, and in-game validation remain in progress.
 
 ## Requirements
 
 - S.T.A.L.K.E.R. Anomaly 1.5.3
-- [Anomaly Modded Exes](https://github.com/themrdemonized/xray-monolith) when the addon uses DLTX or another engine extension
-- Git LFS when the addon contains binary assets tracked by `.gitattributes`
+- [Anomaly Modded Exes](https://github.com/themrdemonized/xray-monolith) with DXML support
+- Python 3.11+ for inventory and build tools
+- Git LFS for generated DDS assets
 
-## Installation
+## Status
 
-Download the ZIP from the latest GitHub Release and extract it directly into the S.T.A.L.K.E.R. Anomaly directory. The archive starts with `gamedata/`; it has no extra wrapper directory.
+No release is available yet. This branch is research and implementation work, not a finished or tested game add-on. Do not install it into an active game profile until the release checks are complete. The intended distribution is a separate Mod Organizer 2 mod containing only runtime files under `gamedata/`.
 
-For a local checkout, run:
+## Inventory
 
-```powershell
-./tools/install.ps1 -GamePath "D:\Stalker\Anomaly-Test"
-```
+`assets/manifest/icons.json` records the standard and widescreen marker definitions, their bindings, original texture references, atlas regions, dimensions, state attributes, implementation status, and in-game verification status. Build it from a locally installed game using `tools/extract_anomaly_resources.ps1` and `tools/inventory_icons.py`. Original game assets are not redistributed.
 
-The installer copies and updates this addon's files. It does not delete the game's existing `gamedata` or files belonging to other addons.
+See [`docs/research.md`](docs/research.md) for source locations, confirmed behavior, and unresolved compatibility items.
 
-To download and install the latest GitHub Release instead of the local files:
+## Architecture
 
-```powershell
-./tools/install.ps1 -GamePath "D:\Stalker\Anomaly-Test" -Latest
-```
+Map marker definitions are XML, so the intended targeted runtime patch uses DXML from Anomaly Modded Exes; DLTX does not apply to those files. Original textures will be replaced by separate generated resources rather than modifying the game's atlas files. Compatibility with third-party marker IDs and the final animation behavior still requires testing.
 
-`-Latest` derives the repository from the `origin` remote. Public releases need no token. For a private repository, set `GH_TOKEN` or `GITHUB_TOKEN` to a token that can read the repository. Local installation never uses the GitHub API.
+## License and assets
 
-## Development
-
-Create a repository from this template, then clone it:
-
-```powershell
-git clone https://github.com/<owner>/<repository>.git
-cd <repository>
-git lfs install
-```
-
-Put only the files shipped by the addon under `gamedata/`. Add standard Anomaly directories such as `textures`, `meshes`, `sounds`, or `shaders` only when the addon needs them. The tracked `.gitkeep` files only preserve the starter directories and are excluded from release ZIPs.
-
-For DLTX, the filename must identify the original root LTX file: `mod_<base-file-name>_sep_<module>.ltx`. For example, a patch to `system.ltx` can be named `mod_system_sep_economy.ltx`. Place it beside the root file it patches. Do not use DLTX syntax unless the addon declares Modded Exes as a requirement.
-
-## Branching
-
-- `master` is stable and releasable.
-- `feature/*` is for development and testing.
-
-## Releases
-
-Every push or merge to `master` runs GitHub Actions. The workflow packages `gamedata/`, creates version `v0.0.<run number>`, creates the matching Git tag and GitHub Release with generated notes, and uploads `<repository>-<version>.zip`.
-
-Rerunning the same workflow keeps the same version and replaces the release asset instead of creating a conflicting tag.
-
-## Git LFS
-
-The template tracks common binary game assets (`.dds`, `.ogf`, `.object`, `.ogg`, `.wav`, `.tga`, and `.png`) with Git LFS. Install Git LFS before adding those files and ensure CI has access to the LFS objects. Text files such as LTX, Lua scripts, Markdown, YAML, and PowerShell remain in normal Git history.
-
-## License
-
-No license is selected by this template. Replace `LICENSE` with the license appropriate for your original work before publishing. Do not grant rights to game assets or third-party material you do not own.
+The repository license applies only to original project material. It does not grant rights to S.T.A.L.K.E.R. Anomaly assets. Generated map and icon files derived from game assets must be built locally from a legally installed game and are not included in public releases without redistribution permission.

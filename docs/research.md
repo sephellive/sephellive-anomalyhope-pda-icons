@@ -1,31 +1,35 @@
 # PDA marker research
 
-**Status: preliminary.** This note records publicly verifiable implementation clues. It is not the required Anomaly 1.5.3 asset inventory. The installed game archives and extracted `gamedata` were not available during this pass, so no marker count, atlas coordinates, animation list, or full compatibility claim is made.
+## Scope and source
 
-## Findings from existing implementations
+This inventory was produced from the local `D:\Hope\Anomaly` installation. Its `changes152to153.txt` identifies the installation as Anomaly 1.5.3. Only base-game archives were extracted; extracted game content is kept in the user's temporary directory and is not committed or copied into this repository.
 
-- Community Anomaly addons identify `configs/ui/map_spots.xml` and `map_spots_16.xml` as controls for stash marker sizing, `ui_actor_pda_icons.xml` for most PDA icon appearance, and `ui_hud.xml` for the fast travel icon and quest tracker arrow. This is a useful search list, not proof that it is complete for Anomaly 1.5.3. See [Visible PDA MAP Icons - Bigger and Brighter V4](https://www.moddb.com/mods/stalker-anomaly/addons/visible-pda-map-icons-bigger-and-brighter).
-- Existing marker addons replace or add dedicated DDS atlases, and one documented Anomaly 1.5.3 addon uses `gamedata/textures/ui/AzzFat_Icons/ui_AzzFat_MapIcons.dds` plus a `modxml_*.script` patch. The author specifically warns about load order and marker `location_level`, indicating that draw order is a behavior that needs verification. See [Vanilla Player Map Marker Revival (DXML)](https://www.moddb.com/mods/stalker-anomaly/addons/vanilla-map-marker-newpda-manarrow-revival).
-- DXML operates on XML as it is read via Lua callbacks and requires the modded executable implementation. Its upstream documentation shows the `modxml_<name>.script` convention. See [DXML documentation](https://github.com/themrdemonized/STALKER-Anomaly-modded-exes/blob/main/docs/DXML.md) and [Anomaly Modded Exes](https://github.com/themrdemonized/xray-monolith).
-- Anomaly's loose-resource override layout mirrors the packaged archive paths; `gamedata` resources take priority over `.db` content. See the [Anomaly Modding Book folder guide](https://github.com/TheParaziT/anomaly-modding-book/blob/main/docs/getting-started/main-folders-and-files.md).
+The repeatable extraction entry point is `tools/extract_anomaly_resources.ps1`. It reads `configs.db0`, `scripts.db0`, and `textures_ui.db0` using the converter supplied with the game. The extraction used here contained 3,802 config files, 414 scripts, and 529 UI texture resources (including DDS and THM files).
 
-## Design implications (pending local verification)
+## Findings
 
-1. Inventory the exact 1.5.3 resources before drawing or replacing markers: search extracted XML, LTX, Lua, and DDS files, then cross-reference marker IDs, textures, coordinates, states, dimensions, and map/minimap usage.
-2. Prefer a dedicated DDS atlas when the UI XML supports it; this avoids overwriting broad shared UI atlases. Confirm this with actual 1.5.3 references before choosing the implementation.
-3. Use DXML only for targeted XML edits that cannot be achieved by a texture-only replacement, and declare Modded Exes as a dependency if required.
-4. Preserve marker IDs, atlas coordinate semantics, frame sequences, scaling rules, and draw-layer behavior. Confirm each in-game before release.
+- Map marker definitions are in `configs/ui/map_spots.xml` and the 16:9 variant `map_spots_16.xml`, with included definitions from `map_spots_mp.xml`, `map_spots_relations.xml`, and `map_spots_complex.xml`.
+- Icon IDs and atlas coordinates resolve through `configs/ui/textures_descr/*.xml`. Resolved source images include `textures/ui/ui_actor_hint_wnd.dds`, `ui_common.dds`, and `ui_hud.dds`; exact source path and crop are recorded per texture layer.
+- The extracted inventory contains **472 definition records across the five files, representing 254 distinct technical IDs and 514 image layers**. The 16:9 and standard files intentionally repeat many IDs with separate sizing/layout definitions. Animation and state attributes are present on 105 records.
+- One map marker references `ui_alife_combat`, which is not defined in the extracted texture description XML and has no matching UI DDS in `textures_ui.db0`. It remains explicitly unresolved; no guessed DDS path or replacement is recorded.
+- Existing Anomaly add-ons identify `map_spots.xml`/`map_spots_16.xml` as sizing/configuration touchpoints and use dedicated DDS atlases. They also show that `location_level` and load order can affect marker visibility. See [Visible PDA MAP Icons - Bigger and Brighter V4](https://www.moddb.com/mods/stalker-anomaly/addons/visible-pda-map-icons-bigger-and-brighter) and the Anomaly 1.5.3-tested [Vanilla Player Map Marker Revival](https://www.moddb.com/mods/stalker-anomaly/addons/vanilla-map-marker-newpda-manarrow-revival).
+- DXML edits XML at load time through `modxml_<name>.script` and requires Anomaly Modded Exes; it is not needed for texture-only changes. See [upstream DXML documentation](https://github.com/themrdemonized/STALKER-Anomaly-modded-exes/blob/main/docs/DXML.md).
 
-## Required next research pass
+## Inventory status
 
-- Obtain the user's Anomaly 1.5.3 game directory (or a lawful local archive extraction) and record the exact game/build version.
-- Extract only relevant UI/config/script resources; enumerate every map marker texture and reference.
-- Build `assets/manifest/icons.json` from the extracted files, then validate atlas rectangles and reference coverage before generating the icon set.
-- Check for Anomaly Modded Exes and relevant UI/PDA mods in the user's test profile; do not infer those dependencies from public addon examples.
+`assets/manifest/icons.json` is generated by `tools/inventory_icons.py` from the five map spot files and all extracted texture descriptions. Each record carries its technical ID, source config, display dimensions/attributes, references, texture layer IDs, source file and atlas region where resolvable, animation hints, implementation status, and in-game verification status.
 
-## Sources consulted
+The base-game definition inventory is captured, but implementation readiness is **incomplete** until the `ui_alife_combat` reference is resolved and the resource behavior is checked in the game. The manifest does not claim compatibility with third-party marker additions.
 
-- [Visible PDA MAP Icons - Bigger and Brighter V4](https://www.moddb.com/mods/stalker-anomaly/addons/visible-pda-map-icons-bigger-and-brighter)
-- [Vanilla Player Map Marker Revival (DXML)](https://www.moddb.com/mods/stalker-anomaly/addons/vanilla-map-marker-newpda-manarrow-revival)
+## Next steps
+
+1. Resolve the `ui_alife_combat` resource through the engine/UI configuration and determine whether it is an engine-generated or archive-backed texture.
+2. Create and review representative SVG markers, then build a separate DDS atlas without overwriting unrelated game UI sheets.
+3. Preserve configured dimensions, variants, layer ordering, blink/animation attributes, map/minimap references, and `location_level` behavior.
+4. Validate every manifest entry and reference, then test PDA, minimap, task changes, stash states, and map transitions in the user's Anomaly installation.
+
+## References
+
+- [Anomaly addon template](https://github.com/sephellive/sephellive-anomaly-addon-template)
 - [DXML documentation](https://github.com/themrdemonized/STALKER-Anomaly-modded-exes/blob/main/docs/DXML.md)
-- [Anomaly Modding Book: main folders and files](https://github.com/TheParaziT/anomaly-modding-book/blob/main/docs/getting-started/main-folders-and-files.md)
+- [Anomaly Modding Book: game folders and resources](https://github.com/TheParaziT/anomaly-modding-book/blob/main/docs/getting-started/main-folders-and-files.md)
