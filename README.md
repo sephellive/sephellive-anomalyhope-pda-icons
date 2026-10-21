@@ -15,7 +15,15 @@ No release is available yet. This branch is research and implementation work, no
 
 ## Inventory
 
-`assets/manifest/icons.json` records the standard and widescreen marker definitions, their bindings, original texture references, atlas regions, dimensions, state attributes, implementation status, and in-game verification status. Build it from a locally installed game using `tools/extract_anomaly_resources.ps1` and `tools/inventory_icons.py`. Original game assets are not redistributed.
+`assets/manifest/icons.json` records the standard and widescreen marker definitions, their bindings, original texture references, atlas regions, dimensions, state attributes, implementation status, and in-game verification status. Rebuild and validate it from a locally installed game:
+
+```powershell
+./tools/extract_anomaly_resources.ps1 -GamePath 'D:\Hope\Anomaly' -OutputPath "$env:TEMP\AnomalyHope-icons"
+python ./tools/inventory_icons.py --config-root "$env:TEMP\AnomalyHope-icons\configs\configs" --textures-root "$env:TEMP\AnomalyHope-icons\textures" --output ./assets/manifest/icons.json
+python ./tools/validate_icon_inventory.py --manifest ./assets/manifest/icons.json --textures-root "$env:TEMP\AnomalyHope-icons\textures"
+```
+
+The validator supports a manifest-only mode for CI and checks local source DDS files and atlas bounds when given `--textures-root`. Original game assets are not redistributed.
 
 See [`docs/research.md`](docs/research.md) for source locations, confirmed behavior, and unresolved compatibility items.
 

@@ -9,7 +9,8 @@
     "configs/ui/map_spots_complex.xml",
     "configs/ui/textures_descr/*.xml"
   ],
-  "inventory_complete": false,
+  "base_marker_definition_inventory_complete": true,
+  "texture_resolution_complete": false,
   "notes": [
     "Entries record configured marker definitions and atlas layers from base archives.",
     "Texture references without resolved coordinates need investigation before implementation.",
@@ -266,7 +267,8 @@
           "component": "texture",
           "texture_id": "ui_hud_map_arrow",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 607,
             "y": 65,
@@ -323,7 +325,8 @@
           "component": "texture",
           "texture_id": "ui_hud_map_arrow",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 607,
             "y": 65,
@@ -363,7 +366,8 @@
           "component": "texture",
           "texture_id": "ui_hud_map_arrow",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 607,
             "y": 65,
@@ -413,7 +417,8 @@
           "component": "texture",
           "texture_id": "ui_hud_map_arrow",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 607,
             "y": 65,
@@ -460,7 +465,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 730,
             "y": 456,
@@ -506,7 +512,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 858,
             "y": 392,
@@ -552,7 +559,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -600,7 +608,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -652,7 +661,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -704,7 +714,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -752,7 +763,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Primary_mission",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 4,
             "y": 563,
@@ -765,7 +777,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -810,7 +823,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_companion_hint",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 460,
@@ -858,7 +872,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_companion_hint",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 460,
@@ -905,7 +920,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_stalker",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 0,
             "y": 0,
@@ -948,7 +964,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_bandit",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 64,
             "y": 0,
@@ -991,7 +1008,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_csky",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 128,
             "y": 0,
@@ -1034,7 +1052,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_army",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 0,
             "y": 128,
@@ -1077,7 +1096,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_freedom",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 64,
             "y": 64,
@@ -1120,7 +1140,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_dolg",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 0,
             "y": 64,
@@ -1163,7 +1184,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_ecolog",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 64,
             "y": 128,
@@ -1206,7 +1228,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_killer",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 128,
             "y": 64,
@@ -1249,7 +1272,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_monolith",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 128,
             "y": 128,
@@ -1292,7 +1316,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_greh",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 0,
             "y": 192,
@@ -1335,7 +1360,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_renegade",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 64,
             "y": 192,
@@ -1378,7 +1404,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_isg",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 128,
             "y": 192,
@@ -1421,7 +1448,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -1473,7 +1501,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -1525,7 +1554,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -1573,7 +1603,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -1621,7 +1652,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -1664,7 +1696,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -1712,7 +1745,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -1755,7 +1789,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -1803,7 +1838,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -1846,7 +1882,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -1894,7 +1931,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -1937,7 +1975,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -1985,7 +2024,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -2028,7 +2068,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -2076,7 +2117,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -2119,7 +2161,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -2167,7 +2210,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -2210,7 +2254,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -2258,7 +2303,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -2301,7 +2347,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -2349,7 +2396,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -2392,7 +2440,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -2440,7 +2489,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -2483,7 +2533,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -2531,7 +2582,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -2574,7 +2626,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -2622,7 +2675,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -2665,7 +2719,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -2713,7 +2768,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -2756,7 +2812,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -2804,7 +2861,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -2847,7 +2905,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -2864,7 +2923,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -2909,7 +2969,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -2926,7 +2987,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -2971,7 +3033,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -2988,7 +3051,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -3033,7 +3097,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -3050,7 +3115,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -3095,7 +3161,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -3112,7 +3179,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -3157,7 +3225,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -3174,7 +3243,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -3220,7 +3290,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_persBig_e",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 872,
@@ -3263,7 +3334,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_SmallBlue",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 493,
             "y": 1000,
@@ -3306,7 +3378,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_persBig_h",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 904,
@@ -3349,7 +3422,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_SmallGreen",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 515,
             "y": 1000,
@@ -3392,7 +3466,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_mark_t",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 665,
             "y": 853,
@@ -3435,7 +3510,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_SmallRed",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 526,
             "y": 1000,
@@ -3484,7 +3560,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_upgrades",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 830,
             "y": 856,
@@ -3537,7 +3614,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_upgrades",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 856,
@@ -3579,7 +3657,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_hl_quest_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 781,
             "y": 853,
@@ -3619,7 +3698,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_hl_quest_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 781,
             "y": 853,
@@ -3659,7 +3739,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_hl_quest_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 781,
             "y": 853,
@@ -3702,7 +3783,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_man",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 749,
             "y": 411,
@@ -3741,7 +3823,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_manArrow",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 801,
             "y": 400,
@@ -3784,7 +3867,8 @@
           "component": "texture",
           "texture_id": "ui_hud_icon_sleep",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 97,
             "y": 226,
@@ -3825,7 +3909,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -3872,7 +3957,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -3919,7 +4005,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -3966,7 +4053,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -4013,7 +4101,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -4060,7 +4149,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -4107,7 +4197,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -4154,7 +4245,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -4229,7 +4321,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -4276,7 +4369,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_persBig_d",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 968,
@@ -4314,7 +4408,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_persBig_d",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 968,
@@ -4355,7 +4450,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_persBig_d",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 968,
@@ -4393,7 +4489,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_persBig_d",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 968,
@@ -4434,7 +4531,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_perssign_h",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 429,
             "y": 971,
@@ -4472,7 +4570,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_perssign_h",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 429,
             "y": 971,
@@ -4517,7 +4616,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 51,
             "y": 562,
@@ -4559,7 +4659,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 51,
             "y": 562,
@@ -4597,7 +4698,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 51,
             "y": 562,
@@ -4635,7 +4737,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 51,
             "y": 562,
@@ -4676,7 +4779,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret_player",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 932,
             "y": 932,
@@ -4714,7 +4818,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret_player",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 932,
             "y": 932,
@@ -4755,7 +4860,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret_searched",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 962,
             "y": 932,
@@ -4793,7 +4899,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret_searched",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 962,
             "y": 932,
@@ -4834,7 +4941,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret_unique",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 932,
             "y": 962,
@@ -4872,7 +4980,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret_unique",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 932,
             "y": 962,
@@ -4913,7 +5022,8 @@
           "component": "texture",
           "texture_id": "ui_mapQuest_gold",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 794,
@@ -4954,7 +5064,8 @@
           "component": "texture",
           "texture_id": "ui_sm_mapQuest_gold",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 749,
             "y": 1011,
@@ -4995,7 +5106,8 @@
           "component": "texture",
           "texture_id": "ui_mapQuest_gold",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 794,
@@ -5036,7 +5148,8 @@
           "component": "texture",
           "texture_id": "ui_sm_mapQuest_gold",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 749,
             "y": 1011,
@@ -5077,7 +5190,8 @@
           "component": "texture",
           "texture_id": "ui_mapQuest_gold",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 794,
@@ -5118,7 +5232,8 @@
           "component": "texture",
           "texture_id": "ui_sm_mapQuest_gold",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 749,
             "y": 1011,
@@ -5158,7 +5273,8 @@
         {
           "component": "texture",
           "texture_id": "ui_alife_combat",
-          "original_file": "textures/ui_alife_combat.dds",
+          "original_file": null,
+          "lookup_status": "unresolved_symbol",
           "source_file_found": false,
           "atlas_rect": null,
           "attributes": {}
@@ -5191,7 +5307,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 767,
@@ -5236,7 +5353,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -5285,7 +5403,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -5334,7 +5453,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -5383,7 +5503,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -5432,7 +5553,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -5481,7 +5603,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -5530,7 +5653,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -5579,7 +5703,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -5628,7 +5753,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -5680,7 +5806,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_territory",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 910,
@@ -5729,7 +5856,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -5777,7 +5905,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_territory",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 910,
@@ -5825,7 +5954,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 831,
             "y": 818,
@@ -5868,7 +5998,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 836,
             "y": 760,
@@ -5914,7 +6045,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -5960,7 +6092,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_resource",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 968,
@@ -6008,7 +6141,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -6060,7 +6194,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -6108,7 +6243,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_territory",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 910,
@@ -6156,7 +6292,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 831,
             "y": 818,
@@ -6199,7 +6336,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 836,
             "y": 760,
@@ -6247,7 +6385,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -6293,7 +6432,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_resource",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 968,
@@ -6341,7 +6481,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -6393,7 +6534,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -6441,7 +6583,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_territory",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 910,
@@ -6489,7 +6632,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 831,
             "y": 818,
@@ -6532,7 +6676,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 836,
             "y": 760,
@@ -6580,7 +6725,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -6626,7 +6772,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_resource",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 968,
@@ -6674,7 +6821,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -6726,7 +6874,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -6774,7 +6923,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_territory",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 910,
@@ -6822,7 +6972,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 831,
             "y": 818,
@@ -6865,7 +7016,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 836,
             "y": 760,
@@ -6913,7 +7065,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -6959,7 +7112,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_resource",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 968,
@@ -7007,7 +7161,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -7059,7 +7214,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -7107,7 +7263,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_territory",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 910,
@@ -7155,7 +7312,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 831,
             "y": 818,
@@ -7198,7 +7356,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 836,
             "y": 760,
@@ -7246,7 +7405,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -7292,7 +7452,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_resource",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 968,
@@ -7340,7 +7501,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -7387,7 +7549,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -7430,7 +7593,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -7473,7 +7637,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -7516,7 +7681,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -7559,7 +7725,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -7602,7 +7769,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -7645,7 +7813,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -7688,7 +7857,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 807,
             "y": 797,
@@ -7729,7 +7899,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -7783,7 +7954,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -7824,7 +7996,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -7878,7 +8051,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -7919,7 +8093,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -7973,7 +8148,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -8014,7 +8190,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -8060,7 +8237,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 807,
             "y": 797,
@@ -8103,7 +8281,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Primary_mission",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 4,
             "y": 563,
@@ -8116,7 +8295,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -8165,7 +8345,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Primary_mission",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 4,
             "y": 563,
@@ -8178,7 +8359,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_mmap_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 848,
             "y": 776,
@@ -8223,7 +8405,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Secondary_mission",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 28,
             "y": 563,
@@ -8236,7 +8419,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -8277,7 +8461,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Secondary_mission",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 28,
             "y": 563,
@@ -8290,7 +8475,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_mmap_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 848,
             "y": 776,
@@ -8338,7 +8524,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_stask_last_01a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 869,
             "y": 776,
@@ -8389,7 +8576,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_stask_last_01a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 869,
             "y": 776,
@@ -8427,7 +8615,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_hl_seq_quest2",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 798,
             "y": 823,
@@ -8467,7 +8656,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Player_Mine",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 480,
@@ -8506,7 +8696,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Player_Mine_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 54,
             "y": 610,
@@ -8546,7 +8737,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Special",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 46,
             "y": 543,
@@ -8585,7 +8777,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Special_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 54,
             "y": 630,
@@ -8625,7 +8818,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_machanik",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 543,
@@ -8664,7 +8858,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_machanik_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 22,
             "y": 630,
@@ -8704,7 +8899,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Trader",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 21,
             "y": 436,
@@ -8743,7 +8939,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Trader_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 69,
             "y": 646,
@@ -8783,7 +8980,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Barman",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 1,
             "y": 436,
@@ -8822,7 +9020,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Barman_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 53,
             "y": 646,
@@ -8862,7 +9061,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_guide",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 26,
             "y": 543,
@@ -8901,7 +9101,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_guide_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 38,
             "y": 630,
@@ -8941,7 +9142,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_VIP",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 26,
             "y": 543,
@@ -8980,7 +9182,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_VIP",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 26,
             "y": 543,
@@ -9020,7 +9223,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_companion",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 460,
@@ -9059,7 +9263,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_companion",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 460,
@@ -9099,7 +9304,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Medic",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 66,
             "y": 543,
@@ -9138,7 +9344,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Medic_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 70,
             "y": 630,
@@ -9178,7 +9385,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Actor_Box",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 522,
@@ -9217,7 +9425,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Actor_Box_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 630,
@@ -9257,7 +9466,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Place_to_rest",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 501,
@@ -9296,7 +9506,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Place_to_rest_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 70,
             "y": 610,
@@ -9338,7 +9549,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_location",
           "original_file": "textures/ui/ui_actor_sleep_screen.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 0,
             "y": 585,
@@ -9379,7 +9591,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_stask_last_01",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 822,
             "y": 795,
@@ -9424,7 +9637,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_stask_last_01",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 822,
             "y": 795,
@@ -9470,7 +9684,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_upgrades",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 830,
             "y": 856,
@@ -9523,7 +9738,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_upgrades",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 856,
@@ -9571,7 +9787,8 @@
           "component": "texture",
           "texture_id": "ui_icon_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 817,
@@ -9616,7 +9833,8 @@
           "component": "texture",
           "texture_id": "ui_icon_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 817,
@@ -9661,7 +9879,8 @@
           "component": "texture",
           "texture_id": "ui_icon_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 817,
@@ -9706,7 +9925,8 @@
           "component": "texture",
           "texture_id": "ui_icon_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 817,
@@ -9751,7 +9971,8 @@
           "component": "texture",
           "texture_id": "ui_icon_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 817,
@@ -9796,7 +10017,8 @@
           "component": "texture",
           "texture_id": "ui_icon_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 817,
@@ -9841,7 +10063,8 @@
           "component": "texture",
           "texture_id": "ui_anomaly_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 775,
             "y": 775,
@@ -9886,7 +10109,8 @@
           "component": "texture",
           "texture_id": "ui_anomaly_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 775,
             "y": 775,
@@ -9931,7 +10155,8 @@
           "component": "texture",
           "texture_id": "ui_anomaly_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 775,
             "y": 775,
@@ -9976,7 +10201,8 @@
           "component": "texture",
           "texture_id": "ui_anomaly_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 775,
             "y": 775,
@@ -10021,7 +10247,8 @@
           "component": "texture",
           "texture_id": "ui_anomaly_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 775,
             "y": 775,
@@ -10066,7 +10293,8 @@
           "component": "texture",
           "texture_id": "ui_anomaly_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 775,
             "y": 775,
@@ -10342,7 +10570,8 @@
           "component": "texture",
           "texture_id": "ui_hud_map_arrow",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 607,
             "y": 65,
@@ -10401,7 +10630,8 @@
           "component": "texture",
           "texture_id": "ui_hud_map_arrow",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 607,
             "y": 65,
@@ -10443,7 +10673,8 @@
           "component": "texture",
           "texture_id": "ui_hud_map_arrow",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 607,
             "y": 65,
@@ -10495,7 +10726,8 @@
           "component": "texture",
           "texture_id": "ui_hud_map_arrow",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 607,
             "y": 65,
@@ -10544,7 +10776,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 730,
             "y": 456,
@@ -10592,7 +10825,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 858,
             "y": 392,
@@ -10640,7 +10874,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -10688,7 +10923,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -10740,7 +10976,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -10790,7 +11027,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Primary_mission",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 4,
             "y": 563,
@@ -10803,7 +11041,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -10848,7 +11087,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_companion_hint",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 460,
@@ -10896,7 +11136,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_companion_hint",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 460,
@@ -10943,7 +11184,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_stalker",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 0,
             "y": 0,
@@ -10986,7 +11228,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_bandit",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 64,
             "y": 0,
@@ -11029,7 +11272,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_csky",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 128,
             "y": 0,
@@ -11072,7 +11316,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_army",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 0,
             "y": 128,
@@ -11115,7 +11360,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_freedom",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 64,
             "y": 64,
@@ -11158,7 +11404,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_dolg",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 0,
             "y": 64,
@@ -11201,7 +11448,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_ecolog",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 64,
             "y": 128,
@@ -11244,7 +11492,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_killer",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 128,
             "y": 64,
@@ -11287,7 +11536,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_monolith",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 128,
             "y": 128,
@@ -11330,7 +11580,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_greh",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 0,
             "y": 192,
@@ -11373,7 +11624,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_renegade",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 64,
             "y": 192,
@@ -11416,7 +11668,8 @@
           "component": "texture",
           "texture_id": "ui_mm_faction_isg",
           "original_file": "textures/ui/ui_mm_faction_patches.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 128,
             "y": 192,
@@ -11459,7 +11712,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -11511,7 +11765,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -11563,7 +11818,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -11615,7 +11871,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -11667,7 +11924,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -11719,7 +11977,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 633,
             "y": 789,
@@ -11767,7 +12026,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -11815,7 +12075,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -11858,7 +12119,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -11906,7 +12168,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -11949,7 +12212,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -11997,7 +12261,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -12040,7 +12305,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -12088,7 +12354,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -12131,7 +12398,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -12179,7 +12447,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -12222,7 +12491,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -12270,7 +12540,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -12313,7 +12584,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -12361,7 +12633,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -12404,7 +12677,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -12452,7 +12726,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -12495,7 +12770,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -12543,7 +12819,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -12586,7 +12863,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -12634,7 +12912,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -12677,7 +12956,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -12725,7 +13005,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -12768,7 +13049,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -12816,7 +13098,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -12859,7 +13142,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -12907,7 +13191,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -12950,7 +13235,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -12998,7 +13284,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -13041,7 +13328,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -13058,7 +13346,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -13103,7 +13392,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -13120,7 +13410,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -13165,7 +13456,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -13182,7 +13474,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -13227,7 +13520,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -13244,7 +13538,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -13289,7 +13584,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -13306,7 +13602,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -13351,7 +13648,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -13368,7 +13666,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -13416,7 +13715,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_persBig_e",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 872,
@@ -13461,7 +13761,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_SmallBlue",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 493,
             "y": 1000,
@@ -13506,7 +13807,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_persBig_h",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 904,
@@ -13551,7 +13853,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_SmallGreen",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 515,
             "y": 1000,
@@ -13596,7 +13899,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_mark_t",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 665,
             "y": 853,
@@ -13641,7 +13945,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_SmallRed",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 526,
             "y": 1000,
@@ -13690,7 +13995,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_upgrades",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 830,
             "y": 856,
@@ -13743,7 +14049,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_upgrades",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 856,
@@ -13787,7 +14094,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_hl_quest_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 781,
             "y": 853,
@@ -13829,7 +14137,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_hl_quest_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 781,
             "y": 853,
@@ -13871,7 +14180,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_hl_quest_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 781,
             "y": 853,
@@ -13916,7 +14226,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_man",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 749,
             "y": 411,
@@ -13957,7 +14268,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_manArrow",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 801,
             "y": 400,
@@ -14000,7 +14312,8 @@
           "component": "texture",
           "texture_id": "ui_hud_icon_sleep",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 97,
             "y": 226,
@@ -14041,7 +14354,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -14088,7 +14402,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -14135,7 +14450,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -14182,7 +14498,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -14229,7 +14546,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -14276,7 +14594,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -14323,7 +14642,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -14370,7 +14690,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -14445,7 +14766,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_exit_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 771,
@@ -14492,7 +14814,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_persBig_d",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 968,
@@ -14530,7 +14853,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_persBig_d",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 968,
@@ -14571,7 +14895,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_persBig_d",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 968,
@@ -14609,7 +14934,8 @@
           "component": "texture",
           "texture_id": "ui_icons_mapPDA_persBig_d",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 968,
@@ -14650,7 +14976,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_perssign_h",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 429,
             "y": 971,
@@ -14688,7 +15015,8 @@
           "component": "texture",
           "texture_id": "ui_icons_newPDA_perssign_h",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 429,
             "y": 971,
@@ -14733,7 +15061,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 51,
             "y": 562,
@@ -14775,7 +15104,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 51,
             "y": 562,
@@ -14813,7 +15143,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 51,
             "y": 562,
@@ -14851,7 +15182,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 51,
             "y": 562,
@@ -14892,7 +15224,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret_player",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 932,
             "y": 932,
@@ -14930,7 +15263,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret_player",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 932,
             "y": 932,
@@ -14971,7 +15305,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret_searched",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 962,
             "y": 932,
@@ -15009,7 +15344,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret_searched",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 962,
             "y": 932,
@@ -15050,7 +15386,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret_unique",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 932,
             "y": 962,
@@ -15088,7 +15425,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_secret_unique",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 932,
             "y": 962,
@@ -15131,7 +15469,8 @@
           "component": "texture",
           "texture_id": "ui_mapQuest_gold",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 794,
@@ -15174,7 +15513,8 @@
           "component": "texture",
           "texture_id": "ui_sm_mapQuest_gold",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 749,
             "y": 1011,
@@ -15217,7 +15557,8 @@
           "component": "texture",
           "texture_id": "ui_mapQuest_gold",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 794,
@@ -15260,7 +15601,8 @@
           "component": "texture",
           "texture_id": "ui_sm_mapQuest_gold",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 749,
             "y": 1011,
@@ -15303,7 +15645,8 @@
           "component": "texture",
           "texture_id": "ui_mapQuest_gold",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 794,
@@ -15346,7 +15689,8 @@
           "component": "texture",
           "texture_id": "ui_sm_mapQuest_gold",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 749,
             "y": 1011,
@@ -15388,7 +15732,8 @@
         {
           "component": "texture",
           "texture_id": "ui_alife_combat",
-          "original_file": "textures/ui_alife_combat.dds",
+          "original_file": null,
+          "lookup_status": "unresolved_symbol",
           "source_file_found": false,
           "atlas_rect": null,
           "attributes": {}
@@ -15421,7 +15766,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 767,
@@ -15468,7 +15814,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -15519,7 +15866,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -15570,7 +15918,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -15621,7 +15970,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -15672,7 +16022,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -15723,7 +16074,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -15774,7 +16126,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -15825,7 +16178,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -15876,7 +16230,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -15928,7 +16283,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_territory",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 910,
@@ -15977,7 +16333,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -16025,7 +16382,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_territory",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 910,
@@ -16073,7 +16431,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 831,
             "y": 818,
@@ -16116,7 +16475,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 836,
             "y": 760,
@@ -16162,7 +16522,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -16208,7 +16569,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_resource",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 968,
@@ -16256,7 +16618,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -16308,7 +16671,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -16356,7 +16720,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_territory",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 910,
@@ -16404,7 +16769,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 831,
             "y": 818,
@@ -16447,7 +16813,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 836,
             "y": 760,
@@ -16495,7 +16862,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -16541,7 +16909,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_resource",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 968,
@@ -16589,7 +16958,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -16641,7 +17011,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -16689,7 +17060,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_territory",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 910,
@@ -16737,7 +17109,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 831,
             "y": 818,
@@ -16780,7 +17153,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 836,
             "y": 760,
@@ -16828,7 +17202,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -16874,7 +17249,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_resource",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 968,
@@ -16922,7 +17298,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -16974,7 +17351,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -17022,7 +17400,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_territory",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 910,
@@ -17070,7 +17449,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 831,
             "y": 818,
@@ -17113,7 +17493,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 836,
             "y": 760,
@@ -17161,7 +17542,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -17207,7 +17589,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_resource",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 968,
@@ -17255,7 +17638,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -17307,7 +17691,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -17355,7 +17740,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_territory",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 910,
@@ -17403,7 +17789,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 831,
             "y": 818,
@@ -17446,7 +17833,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 836,
             "y": 760,
@@ -17494,7 +17882,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_science",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 939,
@@ -17540,7 +17929,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_pt_resource",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 768,
             "y": 968,
@@ -17588,7 +17978,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 720,
             "y": 630,
@@ -17637,7 +18028,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -17682,7 +18074,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -17727,7 +18120,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -17772,7 +18166,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -17817,7 +18212,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -17862,7 +18258,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -17907,7 +18304,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -17952,7 +18350,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 807,
             "y": 797,
@@ -17995,7 +18394,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -18051,7 +18451,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -18094,7 +18495,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -18150,7 +18552,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -18193,7 +18596,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -18249,7 +18653,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 781,
@@ -18292,7 +18697,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 751,
             "y": 824,
@@ -18340,7 +18746,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_squad_leader",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 807,
             "y": 797,
@@ -18385,7 +18792,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Primary_mission",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 4,
             "y": 563,
@@ -18398,7 +18806,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -18449,7 +18858,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Primary_mission",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 4,
             "y": 563,
@@ -18462,7 +18872,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_mmap_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 848,
             "y": 776,
@@ -18509,7 +18920,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Secondary_mission",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 28,
             "y": 563,
@@ -18522,7 +18934,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 795,
@@ -18565,7 +18978,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Secondary_mission",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 28,
             "y": 563,
@@ -18578,7 +18992,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_mmap_stask_last_02",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 848,
             "y": 776,
@@ -18626,7 +19041,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_stask_last_01a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 869,
             "y": 776,
@@ -18677,7 +19093,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_stask_last_01a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 869,
             "y": 776,
@@ -18717,7 +19134,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_hl_seq_quest2",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 798,
             "y": 823,
@@ -18759,7 +19177,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Player_Mine",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 480,
@@ -18800,7 +19219,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Player_Mine_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 54,
             "y": 610,
@@ -18842,7 +19262,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Special",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 46,
             "y": 543,
@@ -18883,7 +19304,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Special_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 54,
             "y": 630,
@@ -18925,7 +19347,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_machanik",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 543,
@@ -18966,7 +19389,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_machanik_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 22,
             "y": 630,
@@ -19008,7 +19432,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Trader",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 21,
             "y": 436,
@@ -19049,7 +19474,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Trader_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 69,
             "y": 646,
@@ -19091,7 +19517,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Barman",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 1,
             "y": 436,
@@ -19132,7 +19559,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Barman_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 53,
             "y": 646,
@@ -19174,7 +19602,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_guide",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 26,
             "y": 543,
@@ -19215,7 +19644,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_guide_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 38,
             "y": 630,
@@ -19257,7 +19687,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_VIP",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 26,
             "y": 543,
@@ -19298,7 +19729,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_VIP",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 26,
             "y": 543,
@@ -19338,7 +19770,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_companion",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 460,
@@ -19377,7 +19810,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_companion",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 460,
@@ -19419,7 +19853,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Medic",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 66,
             "y": 543,
@@ -19460,7 +19895,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Stalker_Medic_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 70,
             "y": 630,
@@ -19500,7 +19936,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Actor_Box",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 522,
@@ -19539,7 +19976,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Actor_Box_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 630,
@@ -19579,7 +20017,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Place_to_rest",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 6,
             "y": 501,
@@ -19618,7 +20057,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_Place_to_rest_small",
           "original_file": "textures/ui/ui_actor_hint_wnd.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 70,
             "y": 610,
@@ -19660,7 +20100,8 @@
           "component": "texture",
           "texture_id": "ui_inGame2_PDA_icon_location",
           "original_file": "textures/ui/ui_actor_sleep_screen.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 0,
             "y": 585,
@@ -19701,7 +20142,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_stask_last_01",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 822,
             "y": 795,
@@ -19746,7 +20188,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_stask_last_01",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 822,
             "y": 795,
@@ -19792,7 +20235,8 @@
           "component": "texture",
           "texture_id": "ui_pda2_upgrades",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 830,
             "y": 856,
@@ -19845,7 +20289,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_upgrades",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 846,
             "y": 856,
@@ -19893,7 +20338,8 @@
           "component": "texture",
           "texture_id": "ui_icon_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 817,
@@ -19938,7 +20384,8 @@
           "component": "texture",
           "texture_id": "ui_icon_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 817,
@@ -19983,7 +20430,8 @@
           "component": "texture",
           "texture_id": "ui_icon_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 817,
@@ -20028,7 +20476,8 @@
           "component": "texture",
           "texture_id": "ui_icon_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 817,
@@ -20073,7 +20522,8 @@
           "component": "texture",
           "texture_id": "ui_icon_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 817,
@@ -20118,7 +20568,8 @@
           "component": "texture",
           "texture_id": "ui_icon_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 752,
             "y": 817,
@@ -20163,7 +20614,8 @@
           "component": "texture",
           "texture_id": "ui_anomaly_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 775,
             "y": 775,
@@ -20208,7 +20660,8 @@
           "component": "texture",
           "texture_id": "ui_anomaly_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 775,
             "y": 775,
@@ -20253,7 +20706,8 @@
           "component": "texture",
           "texture_id": "ui_anomaly_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 775,
             "y": 775,
@@ -20298,7 +20752,8 @@
           "component": "texture",
           "texture_id": "ui_anomaly_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 775,
             "y": 775,
@@ -20343,7 +20798,8 @@
           "component": "texture",
           "texture_id": "ui_anomaly_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 775,
             "y": 775,
@@ -20388,7 +20844,8 @@
           "component": "texture",
           "texture_id": "ui_anomaly_marker",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 775,
             "y": 775,
@@ -20432,7 +20889,8 @@
           "component": "texture",
           "texture_id": "ui_teambase",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 749,
             "y": 880,
@@ -20480,7 +20938,8 @@
           "component": "texture",
           "texture_id": "ui_teambase",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 749,
             "y": 880,
@@ -20522,7 +20981,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 767,
@@ -20565,7 +21025,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 767,
@@ -20610,7 +21071,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 904,
@@ -20655,7 +21117,8 @@
           "component": "texture",
           "texture_id": "ui_mini_af_spot",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 757,
             "y": 854,
@@ -20698,7 +21161,8 @@
           "component": "texture",
           "texture_id": "ui_mini_af_spot",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 757,
             "y": 854,
@@ -20740,7 +21204,8 @@
           "component": "texture",
           "texture_id": "ui_mini_af_spot",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 757,
             "y": 854,
@@ -20784,7 +21249,8 @@
           "component": "texture",
           "texture_id": "ui_mini_af_spot",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 757,
             "y": 854,
@@ -20830,7 +21296,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 836,
             "y": 760,
@@ -20878,7 +21345,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_base",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 836,
             "y": 760,
@@ -20920,7 +21388,8 @@
           "component": "texture",
           "texture_id": "ui_minimap_point",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 729,
             "y": 767,
@@ -20963,7 +21432,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_common",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 525,
             "y": 904,
@@ -21008,7 +21478,8 @@
           "component": "texture",
           "texture_id": "ui_mini_af_spot",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 757,
             "y": 854,
@@ -21051,7 +21522,8 @@
           "component": "texture",
           "texture_id": "ui_mini_af_spot",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 757,
             "y": 854,
@@ -21093,7 +21565,8 @@
           "component": "texture",
           "texture_id": "ui_mini_af_spot",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 757,
             "y": 854,
@@ -21137,7 +21610,8 @@
           "component": "texture",
           "texture_id": "ui_mini_af_spot",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 757,
             "y": 854,
@@ -21183,7 +21657,8 @@
           "component": "texture",
           "texture_id": "ui\\ui_hud",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "direct_resource_path",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 305,
             "y": 762,
@@ -21234,7 +21709,8 @@
           "component": "texture",
           "texture_id": "ui_hud_map_arrow",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 607,
             "y": 65,
@@ -21292,7 +21768,8 @@
           "component": "texture",
           "texture_id": "ui_hud_map_arrow",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 607,
             "y": 65,
@@ -21344,7 +21821,8 @@
           "component": "texture",
           "texture_id": "ui_hud_map_arrow",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 607,
             "y": 65,
@@ -21394,7 +21872,8 @@
           "component": "texture",
           "texture_id": "ui_hud_map_arrow",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 607,
             "y": 65,
@@ -21462,7 +21941,8 @@
           "component": "texture",
           "texture_id": "ui_hud_map_arrow",
           "original_file": "textures/ui/ui_hud.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 607,
             "y": 65,
@@ -21507,7 +21987,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_common_actor",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 808,
             "y": 790,
@@ -21549,7 +22030,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_common_actor",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 808,
             "y": 790,
@@ -21591,7 +22073,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_common_actor",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 808,
             "y": 790,
@@ -21633,7 +22116,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_common_actor",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 808,
             "y": 790,
@@ -21681,7 +22165,8 @@
           "component": "top_icon/texture",
           "texture_id": "ui_pda2_secondary_task2",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 859,
             "y": 977,
@@ -21698,6 +22183,7 @@
           "component": "timer/texture",
           "texture_id": null,
           "original_file": null,
+          "lookup_status": "unresolved_symbol",
           "source_file_found": false,
           "atlas_rect": null,
           "attributes": {}
@@ -21706,7 +22192,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 896,
             "y": 776,
@@ -21765,7 +22252,8 @@
           "component": "top_icon/texture",
           "texture_id": "ui_pda2_secondary_alert2",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 859,
             "y": 997,
@@ -21782,6 +22270,7 @@
           "component": "timer/texture",
           "texture_id": null,
           "original_file": null,
+          "lookup_status": "unresolved_symbol",
           "source_file_found": false,
           "atlas_rect": null,
           "attributes": {}
@@ -21790,7 +22279,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 896,
             "y": 776,
@@ -21847,7 +22337,8 @@
           "component": "texture",
           "texture_id": "ui_mmap_secondary_alert",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 776,
             "y": 762,
@@ -21895,7 +22386,8 @@
           "component": "top_icon/texture",
           "texture_id": "ui_pda2_attack_base2",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 859,
             "y": 877,
@@ -21912,6 +22404,7 @@
           "component": "timer/texture",
           "texture_id": null,
           "original_file": null,
+          "lookup_status": "unresolved_symbol",
           "source_file_found": false,
           "atlas_rect": null,
           "attributes": {}
@@ -21920,7 +22413,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 896,
             "y": 776,
@@ -21971,7 +22465,8 @@
           "component": "top_icon/texture",
           "texture_id": "ui_pda2_capture_base2",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 859,
             "y": 857,
@@ -21988,6 +22483,7 @@
           "component": "timer/texture",
           "texture_id": null,
           "original_file": null,
+          "lookup_status": "unresolved_symbol",
           "source_file_found": false,
           "atlas_rect": null,
           "attributes": {}
@@ -21996,7 +22492,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 896,
             "y": 776,
@@ -22047,7 +22544,8 @@
           "component": "top_icon/texture",
           "texture_id": "ui_pda2_defend_base2",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 859,
             "y": 897,
@@ -22064,6 +22562,7 @@
           "component": "timer/texture",
           "texture_id": null,
           "original_file": null,
+          "lookup_status": "unresolved_symbol",
           "source_file_found": false,
           "atlas_rect": null,
           "attributes": {}
@@ -22072,7 +22571,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 896,
             "y": 776,
@@ -22123,7 +22623,8 @@
           "component": "top_icon/texture",
           "texture_id": "ui_pda2_bring_item2",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 859,
             "y": 817,
@@ -22140,6 +22641,7 @@
           "component": "timer/texture",
           "texture_id": null,
           "original_file": null,
+          "lookup_status": "unresolved_symbol",
           "source_file_found": false,
           "atlas_rect": null,
           "attributes": {}
@@ -22148,7 +22650,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 896,
             "y": 776,
@@ -22199,7 +22702,8 @@
           "component": "top_icon/texture",
           "texture_id": "ui_pda2_bring_item2",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 859,
             "y": 817,
@@ -22216,6 +22720,7 @@
           "component": "timer/texture",
           "texture_id": null,
           "original_file": null,
+          "lookup_status": "unresolved_symbol",
           "source_file_found": false,
           "atlas_rect": null,
           "attributes": {}
@@ -22224,7 +22729,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 896,
             "y": 776,
@@ -22275,7 +22781,8 @@
           "component": "top_icon/texture",
           "texture_id": "ui_pda2_secondary_task2",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 859,
             "y": 977,
@@ -22292,6 +22799,7 @@
           "component": "timer/texture",
           "texture_id": null,
           "original_file": null,
+          "lookup_status": "unresolved_symbol",
           "source_file_found": false,
           "atlas_rect": null,
           "attributes": {}
@@ -22300,7 +22808,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 896,
             "y": 776,
@@ -22351,7 +22860,8 @@
           "component": "top_icon/texture",
           "texture_id": "ui_pda2_destroy_enemy2",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 859,
             "y": 917,
@@ -22368,6 +22878,7 @@
           "component": "timer/texture",
           "texture_id": null,
           "original_file": null,
+          "lookup_status": "unresolved_symbol",
           "source_file_found": false,
           "atlas_rect": null,
           "attributes": {}
@@ -22376,7 +22887,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 896,
             "y": 776,
@@ -22427,7 +22939,8 @@
           "component": "top_icon/texture",
           "texture_id": "ui_pda2_info2",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 859,
             "y": 957,
@@ -22444,6 +22957,7 @@
           "component": "timer/texture",
           "texture_id": null,
           "original_file": null,
+          "lookup_status": "unresolved_symbol",
           "source_file_found": false,
           "atlas_rect": null,
           "attributes": {}
@@ -22452,7 +22966,8 @@
           "component": "static_border/texture",
           "texture_id": "ui_pda2_stask_last_02a",
           "original_file": "textures/ui/ui_common.dds",
-          "source_file_found": true,
+          "lookup_status": "resolved_descriptor",
+          "source_file_found": false,
           "atlas_rect": {
             "x": 896,
             "y": 776,
