@@ -37,14 +37,14 @@ jobs:
         run: |
           game_archive="AnomalyHope-PDA-Icons-${GITHUB_REF_NAME}.zip"
           source_archive="${GITHUB_REPOSITORY#*/}-${GITHUB_REF_NAME}-source.zip"
-          zip -r "${game_archive}" gamedata
+          zip -r "${game_archive}" gamedata -x '*/.gitkeep'
           mkdir -p dist/package
           cp README.md CHANGELOG.md LICENSE requirements.txt dist/package/
           cp -a assets docs tools dist/package/
           find dist/package -type d -name '__pycache__' -prune -exec rm -rf {} +
           (cd dist/package && zip -r "../../${source_archive}" .)
           test "$(unzip -Z1 "${game_archive}" | grep -c '^gamedata/')" -gt 0
-          ! unzip -Z1 "${game_archive}" | grep -E 'build_report|__pycache__|\.py$'
+          ! unzip -Z1 "${game_archive}" | grep -E 'build_report|__pycache__|\.py$|/\.gitkeep$'
           echo "GAME_ARCHIVE=${game_archive}" >> "${GITHUB_ENV}"
           echo "SOURCE_ARCHIVE=${source_archive}" >> "${GITHUB_ENV}"
 
