@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the HD atlas plan and, optionally, a local generated build."""
+"""Validate the semantic icon plan and, optionally, a generated game package."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ import struct
 import sys
 from pathlib import Path
 
-from build_icons import collect_rules
+from icon_design import ATLAS_SIZE, ATLAS_TEXTURE, build_marker_plan
 
 
 def digest(path: Path) -> str:
@@ -25,7 +25,7 @@ def dds_header(path: Path) -> tuple[int, int, str, int]:
     with path.open("rb") as stream:
         data = stream.read(128)
     if len(data) != 128 or data[:4] != b"DDS ":
-        raise ValueError(f"Invalid DDS header: {path}")
+        raise ValueError(f"Invalid DDS file: {path}")
     height, width = struct.unpack_from("<II", data, 12)
     mips = struct.unpack_from("<I", data, 28)[0] or 1
     fourcc = data[84:88].decode("ascii", errors="replace").rstrip("\0")
@@ -36,65 +36,72 @@ def main() -> int:
     project = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, default=project / "assets/manifest/icons.json")
-    parser.add_argument("--output-root", type=Path, help="Local output from build_icons.py")
+    parser.add_argument("--output-root", type=Path)
+    parser.add_argument("--report-path", type=Path,
+                        help="Optional report path when validating a committed package")
     args = parser.parse_args()
     errors: list[str] = []
-    inventory = json.loads(args.manifest.read_text(encoding="utf-8"))
-    try:
-        rules, unresolved = collect_rules(inventory, 2)
-    except ValueError as error:
-        errors.append(str(error))
-        rules, unresolved = {}, set()
+    manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
+    plan = build_marker_plan(manifest)
+    categories = {str(rule["category"]) for rule in plan.values()}
 
-    source_files = {str(rule["source_file"]) for rule in rules.values()}
-    if len(rules) != 94:
-        errors.append(f"expected 94 distinct resolved layer rules, found {len(rules)}")
-    if len(source_files) != 5:
-        errors.append(f"expected five source atlases, found {sorted(source_files)}")
-    if unresolved != {"ui_alife_combat"}:
-        errors.append(f"unexpected unresolved symbols: {sorted(unresolved)}")
-    for key, rule in rules.items():
-        if any(int(rule[field]) <= 0 for field in ("width", "height")):
-            errors.append(f"invalid target rectangle for {key}: {rule}")
-        if any(int(rule[field]) % 2 for field in ("x", "y", "width", "height")):
-            errors.append(f"target rectangle is not an exact 2x mapping for {key}")
+    expected_categories = {
+        "transition", "pointer", "player", "primary_task", "secondary_task", "danger",
+        "anomaly", "friendly", "neutral", "companion", "trader", "mechanic", "medic",
+        "guide", "sleep", "stash", "artifact", "faction", "base", "territory",
+        "resource", "science", "squad", "ammo", "drink", "food", "kit", "mine",
+        "deadbody", "user",
+    }
+    missing_categories = expected_categories - categories
+    if missing_categories:
+        errors.append(f"semantic categories missing from plan: {sorted(missing_categories)}")
+    if len(plan) < 220:
+        errors.append(f"expected broad marker coverage, found only {len(plan)} marker rules")
+    for required in ("level_changer_up_spot", "storyline_task_spot", "secondary_task_spot",
+                     "ui_pda2_trader_location_spot", "anomaly_thermal_spot"):
+        if required not in plan:
+            errors.append(f"required marker rule missing: {required}")
+    for technical_id, rule in plan.items():
+        if int(rule["width"]) <= 0 or int(rule["height"]) <= 0:
+            errors.append(f"invalid display size for {technical_id}")
+        if not rule["layers"]:
+            errors.append(f"marker has no texture layers: {technical_id}")
+        for layer in rule["layers"]:
+            if layer["texture"] != ATLAS_TEXTURE:
+                errors.append(f"unexpected atlas path for {technical_id}")
 
     if args.output_root:
         root = args.output_root.resolve()
-        report_path = root / "build_report.json"
+        report_path = args.report_path.resolve() if args.report_path else root / "build_report.json"
         script_path = root / "gamedata/scripts/modxml_anomalyhope_pda_icons.script"
-        if not report_path.is_file():
-            errors.append("local build has no build_report.json")
-        if not script_path.is_file():
-            errors.append("local build has no generated DXML script")
+        atlas_path = root / "gamedata/textures/ui/anomalyhope/pda/modern_icons.dds"
+        for path in (report_path, script_path, atlas_path):
+            if not path.is_file():
+                errors.append(f"generated file missing: {path}")
         if report_path.is_file():
             report = json.loads(report_path.read_text(encoding="utf-8"))
-            if report.get("layer_rule_count") != len(rules):
-                errors.append("build report layer count differs from manifest plan")
-            if set(report.get("unresolved_texture_ids_left_unchanged", [])) != unresolved:
-                errors.append("build report unresolved symbols differ from manifest plan")
-            atlases = report.get("atlases", [])
-            if len(atlases) != len(source_files):
-                errors.append("build report atlas coverage is incomplete")
-            for atlas in atlases:
-                output = (root / atlas["output_file"]).resolve()
-                if root not in output.parents or not output.is_file():
-                    errors.append(f"missing or unsafe atlas output: {output}")
-                    continue
-                width, height, fourcc, mips = dds_header(output)
-                source = atlas["source"]
-                if (width, height) != (source["width"] * 2, source["height"] * 2):
-                    errors.append(f"atlas is not exactly 2x: {output.name}")
-                if fourcc != "DXT5" or mips != 1:
-                    errors.append(f"unexpected DDS layout for {output.name}: {fourcc}, mips={mips}")
-                if digest(output) != atlas["output"]["sha256"]:
-                    errors.append(f"atlas hash differs from report: {output.name}")
+            if report.get("marker_rule_count") != len(plan):
+                errors.append("build report marker count differs from semantic plan")
+            if report.get("atlas_texture") != ATLAS_TEXTURE:
+                errors.append("build report atlas texture differs from design")
+            if atlas_path.is_file() and digest(atlas_path) != report.get("atlas", {}).get("sha256"):
+                errors.append("atlas hash differs from build report")
+        if atlas_path.is_file():
+            width, height, fourcc, mips = dds_header(atlas_path)
+            if (width, height) != (ATLAS_SIZE, ATLAS_SIZE):
+                errors.append(f"unexpected atlas dimensions: {width}x{height}")
+            if fourcc != "DXT5" or mips != 1:
+                errors.append(f"unexpected atlas layout: {fourcc}, mips={mips}")
         if script_path.is_file():
             script = script_path.read_text(encoding="utf-8")
-            if script.count("texture = ") != len(rules):
-                errors.append("DXML rule count differs from manifest plan")
-            if "removeElementAttr" in script:
-                errors.append("DXML must preserve layer attributes rather than remove them")
+            if script.count("layers = {") != len(plan):
+                errors.append("DXML rule count differs from semantic plan")
+            if "r = 255, g = 255, b = 255" not in script:
+                errors.append("DXML does not neutralize legacy marker tint")
+            if "height = rule.height, scale = 0" not in script:
+                errors.append("DXML does not disable zoom-driven marker growth")
+            if 'element_name == "static_border"' not in script:
+                errors.append("DXML does not resize nested objective borders")
             for name in ("map_spots.xml", "map_spots_16.xml", "map_spots_complex.xml"):
                 if name not in script:
                     errors.append(f"DXML target missing: {name}")
@@ -103,7 +110,7 @@ def main() -> int:
         print("FAIL: " + "\nFAIL: ".join(errors), file=sys.stderr)
         return 1
     suffix = f"; local build at {args.output_root} verified" if args.output_root else ""
-    print(f"PASS: {len(rules)} layer rules preserve five original atlas families; unresolved: {sorted(unresolved)}{suffix}")
+    print(f"PASS: {len(plan)} markers mapped to {len(categories)} minimalist semantic categories{suffix}")
     return 0
 
 

@@ -21,18 +21,18 @@ The repeatable extraction entry point is `tools/extract_anomaly_resources.ps1`. 
 
 The definition inventory is complete for the five base-game files listed above. One source symbol, `ui_alife_combat`, has no descriptor or archived UI DDS; it is attached to the `alife_combat_spot` definition in both layouts. Its combat-contact purpose is evident from the configured ID and binding, but the original image is unresolved. The manifest records this explicitly and the validator checks all five referenced source DDS atlases and their available rectangle bounds.
 
-The initial semantic-glyph implementation was rejected after review because it replaced every nested layer of a marker with one generic image. That erased faction identity, specialized task shapes, borders, and some visual states.
+The initial semantic-glyph implementation was rejected because it replaced every nested layer of a marker with one generic image. That erased faction identity, specialized task shapes, borders, and some visual states. The following conservative 2× restoration was also rejected after visual review: although technically accurate, it retained the oversized cyan transition markers and cluttered global-map hierarchy.
 
-The current implementation instead builds conservative 2× versions of all five source atlas families. It uses premultiplied-alpha Lanczos scaling and restrained edge cleanup, preserving the source silhouette and color treatment. Ninety-four unambiguous DXML rules match the original texture ID plus any explicit source rectangle, redirect the layer to its corresponding HD atlas, and double the source rectangle. They do not alter marker width/height, tint, nested structure, animation attributes, location level, heading, or layer order. The unresolved `ui_alife_combat` symbol remains untouched.
+The current implementation uses an original 1024×1024 DXT5 atlas built from deterministic Pillow drawing primitives. It maps 247 visible technical IDs to 50 semantic categories. Warm ivory handles navigation, amber indicates objectives and loot, rust red indicates danger, muted sage indicates allies and services, and steel gray handles strategic information. Restrained faction and anomaly variants keep those identities distinguishable without returning to neon colors. Transition markers are reduced from 19×21 to 5×5 and use one directional chevron inside a compact badge. Low-priority tactical marks use 3–5 pixel display sizes, while primary objectives use 7×7.
 
-Generated atlases are derivative game assets and therefore remain local. Public releases provide a builder that reads them from a legally installed copy of Anomaly.
+DXML selects the category by marker definition name, updates its display dimensions, disables zoom-driven icon growth, and redirects each texture layer to the new atlas. It keeps binding nodes, heading angles, location levels, visibility thresholds, animation timing and XML order. Nested objective borders are resized to the primary icon plus one pixel on each side. Secondary objective layers use a restrained pulse ring; redundant decorative layers become transparent. Because the atlas artwork is original, the tagged release can contain a ready-to-install MO2 archive.
 
 ## Next steps
 
-1. Test atlas redirection and doubled source rectangles in Anomaly 1.5.3 through MO2.
+1. Test semantic atlas redirection and compact display dimensions in Anomaly 1.5.3 through MO2.
 2. Check PDA/minimap rendering, task state changes, stash states, animations, and map transitions at 1080p, 1440p, and 4K.
 3. Test third-party additions that reuse standard texture IDs and document custom-ID compatibility requirements.
-4. Continue tracing the original `ui_alife_combat` texture source and document it if found.
+4. Verify readability and overlap behavior on the global map at minimum and maximum zoom.
 
 ## References
 

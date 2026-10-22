@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          lfs: true
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -27,20 +29,26 @@ jobs:
         run: |
           python tools/validate_icon_inventory.py
           python tools/validate_icon_build.py
+          python tools/validate_icon_build.py --output-root . --report-path assets/manifest/release_build.json
           python -m compileall -q tools
 
-      - name: Package local builder
+      - name: Package game add-on and source builder
         shell: bash
         run: |
-          archive="${GITHUB_REPOSITORY#*/}-${GITHUB_REF_NAME}.zip"
+          game_archive="AnomalyHope-PDA-Icons-${GITHUB_REF_NAME}.zip"
+          source_archive="${GITHUB_REPOSITORY#*/}-${GITHUB_REF_NAME}-source.zip"
+          zip -r "${game_archive}" gamedata
           mkdir -p dist/package
           cp README.md CHANGELOG.md LICENSE requirements.txt dist/package/
           cp -a assets docs tools dist/package/
           find dist/package -type d -name '__pycache__' -prune -exec rm -rf {} +
-          (cd dist/package && zip -r "../../${archive}" .)
-          echo "ARCHIVE=${archive}" >> "${GITHUB_ENV}"
+          (cd dist/package && zip -r "../../${source_archive}" .)
+          test "$(unzip -Z1 "${game_archive}" | grep -c '^gamedata/')" -gt 0
+          ! unzip -Z1 "${game_archive}" | grep -E 'build_report|__pycache__|\.py$'
+          echo "GAME_ARCHIVE=${game_archive}" >> "${GITHUB_ENV}"
+          echo "SOURCE_ARCHIVE=${source_archive}" >> "${GITHUB_ENV}"
 
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "${GITHUB_REF_NAME}" "${ARCHIVE}" --verify-tag --title "${GITHUB_REF_NAME}" --generate-notes
+        run: gh release create "${GITHUB_REF_NAME}" "${GAME_ARCHIVE}" "${SOURCE_ARCHIVE}" --verify-tag --title "${GITHUB_REF_NAME}" --generate-notes
